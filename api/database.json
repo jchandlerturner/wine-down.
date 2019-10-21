@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "name": "chan",
+      "email": "chan@chan",
+      "password": "chan",
+      "id": 2
+    }
+  ],
+  "wines": [
+    {
+      "name": "Two Buck Chuck",
+      "price": 3.99,
+      "tastingNotes": "Tastes cheap",
+      "starRating": 0,
+      "varietalId": 1,
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "varietals": [
+    {
+      "varietal": "Cabernet Sauvignon",
+      "id": 1,
+      "typeId": 1
+    }
+  ],
+  "types": [
+    {
+      "type": "Red",
+      "id": 1
+    },
+    {
+      "type": "White",
+      "id": 2
+    },
+    {
+      "type": "Bubbles",
+      "id": 3
+    },
+    {
+      "type": "Rose",
+      "id": 4
+    }
+  ]
+}

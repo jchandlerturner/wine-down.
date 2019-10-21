@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import LoginManager from "../../modules/LoginManager";
+import { Link, withRouter } from "react-router-dom"
 
 
 class Login extends Component {
@@ -41,27 +42,30 @@ class Login extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleLogin}>
-                <fieldset>
-                    <h3>Please log in</h3>
-                    <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder="Email address"
-                            required="" autoFocus="" />
-                        <label htmlFor="inputEmail">Email address</label>
+            <div>
+                <form onSubmit={this.handleLogin}>
+                    <fieldset>
+                        <h3>Please log in</h3>
+                        <div className="formgrid">
+                            <input onChange={this.handleFieldChange} type="email"
+                                id="email"
+                                placeholder="Email address"
+                                required="" autoFocus="" />
+                            <label htmlFor="inputEmail">Email address</label>
 
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Password</label>
-                    </div>
-                    <button type="submit" className="submit">
-                        Log in
+                            <input onChange={this.handleFieldChange} type="password"
+                                id="password"
+                                placeholder="Password"
+                                required="" />
+                            <label htmlFor="inputPassword">Password</label>
+                        </div>
+                        <button type="submit" className="submit">
+                            Log in
                 </button>
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
+                {/* <Link className="nav-link" to="/signup">Not a member? Sign up here!</Link>  */}
+            </div>
         )
     }
 }

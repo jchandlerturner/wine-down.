@@ -46,7 +46,7 @@ class WineDown extends Component {
       <React.Fragment>
       {(this.state.user) ?
         <>
-        <ApplicationViews />
+        <ApplicationViews clearUser={this.clearUser}/>
         </>
        :<><div className="logRegContainer">
          <Login setUser={this.setUser}/>
