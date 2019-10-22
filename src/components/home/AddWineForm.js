@@ -8,13 +8,15 @@ class AddWineForm extends Component {
         name: "",
         price: 0,
         tastingNotes: "",
-        starRating: 0,
+        starRating: "",
         varietals: [],
         types: [],
-        userId: 0,
-        varietal: 0,
-        type: 0
+        userId: "",
+        varietal: "",
+        type: ""
     };
+
+    activeUser = parseInt(sessionStorage.getItem("userId"))
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -32,15 +34,16 @@ class AddWineForm extends Component {
             this.setState({ loadingStatus: true });
             const wine = {
                 name: this.state.name,
-                price: this.state.price,
+                price: parseFloat(this.state.price),
                 tastingNotes: this.state.tastingNotes,
-                starRating: this.state.starRating,
-                varietal: this.state.varietal,
-                type: this.state.type
+                starRating: parseInt(this.state.starRating),
+                varietal: parseInt(this.state.varietal),
+                type: parseInt(this.state.type),
+                userId: this.activeUser
             };
 
             WineManager.post(wine)
-                .then(() => this.props.history.push("/wines"));
+                .then(() => this.props.history.push("/wines/new"));
         }
     };
     

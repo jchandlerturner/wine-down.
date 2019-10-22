@@ -24,49 +24,14 @@
       "id": 1
     },
     {
-      "name": "Red",
-      "price": "2.99",
-      "tastingNotes": "",
-      "starRating": 0,
-      "varietal": "1",
-      "type": [],
-      "id": 2
-    },
-    {
-      "name": "Kendall Jackson",
-      "price": "5.99",
-      "tastingNotes": "",
-      "starRating": 0,
-      "varietal": "4",
-      "type": 0,
-      "id": 3
-    },
-    {
-      "name": "chan",
-      "price": "2.99",
-      "tastingNotes": "",
-      "starRating": 0,
-      "varietal": 0,
-      "type": 0,
-      "id": 4
-    },
-    {
-      "name": "red",
-      "price": "2.99",
-      "tastingNotes": "",
-      "starRating": "4",
-      "varietal": "3",
-      "type": "2",
-      "id": 5
-    },
-    {
-      "name": "madi",
-      "price": "2.99",
-      "tastingNotes": "nice",
-      "starRating": "5",
-      "varietal": "3",
-      "type": "3",
-      "id": 6
+      "name": "KJ",
+      "price": 499,
+      "tastingNotes": "good",
+      "starRating": 5,
+      "varietal": 4,
+      "type": 4,
+      "userId": 2,
+      "id": 12
     }
   ],
   "varietals": [

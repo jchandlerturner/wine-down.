@@ -33,6 +33,9 @@ class Login extends Component {
                 window.alert("Please enter password")
             } else if (singleUser) {
                 this.props.setUser(singleUser);
+                sessionStorage.setItem("userId", singleUser.id);
+                sessionStorage.setItem("email", this.state.email);
+                sessionStorage.setItem("name", this.state.name);
             } else {
                 window.alert("User email and password do not match")
             }
