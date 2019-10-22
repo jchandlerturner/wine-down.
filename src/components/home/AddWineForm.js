@@ -43,7 +43,7 @@ class AddWineForm extends Component {
             };
 
             WineManager.post(wine)
-                .then(() => this.props.history.push("/wines/new"));
+                .then(() => this.props.history.push("/"));
         }
     };
     

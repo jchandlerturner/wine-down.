@@ -15,23 +15,24 @@
   ],
   "wines": [
     {
-      "name": "Two Buck Chuck",
-      "price": 3.99,
-      "tastingNotes": "Tastes cheap",
-      "starRating": 0,
-      "varietalId": 1,
-      "userId": 1,
-      "id": 1
-    },
-    {
       "name": "KJ",
       "price": 499,
       "tastingNotes": "good",
       "starRating": 5,
-      "varietal": 4,
-      "type": 4,
+      "varietalId": 4,
+      "typeId": 4,
       "userId": 2,
       "id": 12
+    },
+    {
+      "name": "red",
+      "price": 34,
+      "tastingNotes": "",
+      "starRating": null,
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 2,
+      "id": 13
     }
   ],
   "varietals": [
