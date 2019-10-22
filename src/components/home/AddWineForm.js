@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WineManager from '../../modules/WineManager';
 import VarietalManager from '../../modules/VarietalManager'
+import TypeManager from '../../modules/TypeManager'
 
 class AddWineForm extends Component {
     state = {
@@ -11,15 +12,14 @@ class AddWineForm extends Component {
         varietals: [],
         types: [],
         userId: 0,
-        varietal: 0
+        varietal: 0,
+        type: 0
     };
 
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
-        console.log(stateToChange)
-        console.log(this.state)
     };
 
     /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
@@ -36,24 +36,31 @@ class AddWineForm extends Component {
                 tastingNotes: this.state.tastingNotes,
                 starRating: this.state.starRating,
                 varietal: this.state.varietal,
-                type: this.state.types
+                type: this.state.type
             };
 
             WineManager.post(wine)
                 .then(() => this.props.history.push("/wines"));
         }
     };
+    
     componentDidMount() {
-        VarietalManager.getAll()
-            .then(varietals => {
+        const newState = {}
+        VarietalManager.getAll().then(varietals => {
+            newState.varietals = varietals
+        })
+            .then(() =>
+                TypeManager.getAll().then(types => {
+                    newState.types = types
+                })
+            )
+            .then(() => {
+                this.setState(newState)
+            })
 
-                this.setState({
-                    varietals: varietals
-                });
-            });
     }
     render() {
-       
+
         return (
             <>
                 <form>
@@ -79,7 +86,7 @@ class AddWineForm extends Component {
                             />
 
                             <label htmlFor="Tasting Notes">Tasting Notes</label>
-                            <textarea name="message" rows="10" cols="30">
+                            <textarea id="tastingNotes" onChange={this.handleFieldChange} name="message" rows="10" cols="30">
                             </textarea>
 
                             <label htmlFor="Rating">Rating</label>
@@ -87,17 +94,16 @@ class AddWineForm extends Component {
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="rating"
+                                id="starRating"
                                 placeholder="Rate your wine from 1-5"
                             />
 
-                            <label htmlFor="Varietal">Varietal</label>
+                            <label htmlFor="Varietal">Varietal: </label>
                             <select
                                 defaultValue=""
                                 name="varietals"
                                 id="varietal"
                                 onChange={this.handleFieldChange}>
-                                <option>Varietal: </option>
                                 {this.state.varietals.map(varietal =>
                                     <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
                                         {varietal.varietal}
@@ -105,12 +111,17 @@ class AddWineForm extends Component {
                                 )}
                             </select>
 
-                            <label htmlFor="Type">Type</label>
-                            <select name="type">
-                                <option value="Red">Red</option>
-                                <option value="White">White</option>
-                                <option value="Bubbles">Bubbles</option>
-                                <option value="Rose">Rosé</option>
+                            <label htmlFor="Type">Type: </label>
+                            <select
+                                defaultValue=""
+                                name="types"
+                                id="type"
+                                onChange={this.handleFieldChange}>
+                                {this.state.types.map(type =>
+                                    <option className="var" key={type.id} id={type.type} value={type.id}>
+                                        {type.type}
+                                    </option>
+                                )}
                             </select>
 
                         </div>
