@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/wines/${id}`).then(result => result.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/wines`).then(result => result.json())
+    return fetch(`${remoteURL}/wines?_expand=type&_expand=varietal`).then(result => result.json())
   }, 
   delete(id) {
     return fetch(`http://localhost:5002/wines/${id}`, {

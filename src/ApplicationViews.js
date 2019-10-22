@@ -5,6 +5,7 @@ import BrowseList from './components/browse/BrowseList'
 import ProfileList from './components/profile/ProfileList'
 import SignUp from './components/auth/SignUp'
 import AddWineForm from "./components/home/AddWineForm";
+import EditWineForm from "./components/home/EditWineForm";
 
 export default class ApplicationViews extends Component {
 
@@ -27,6 +28,9 @@ export default class ApplicationViews extends Component {
                 }} />
                 <Route path="/wines/new" render={(props) => {
                     return <AddWineForm {...props} />
+                }} />
+                <Route path="/wines/:winesId(\d+)/edit" render={(props) => {
+                    return <EditWineForm {...props} />
                 }} />
             </React.Fragment>
         );

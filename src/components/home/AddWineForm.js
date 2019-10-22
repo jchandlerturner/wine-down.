@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import WineManager from '../../modules/WineManager';
+import VarietalManager from '../../modules/VarietalManager'
+import TypeManager from '../../modules/TypeManager'
 
 class AddWineForm extends Component {
     state = {
-        "name": "",
-        "price": 0,
-        "tastingNotes": "",
-        "starRating": 0,
-        "varietals": [],
-        "types": [],
-        "userId": 0,
+        name: "",
+        price: 0,
+        tastingNotes: "",
+        starRating: "",
+        varietals: [],
+        types: [],
+        userId: "",
+        varietal: "",
+        type: ""
     };
+
+    activeUser = parseInt(sessionStorage.getItem("userId"))
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -28,21 +34,36 @@ class AddWineForm extends Component {
             this.setState({ loadingStatus: true });
             const wine = {
                 name: this.state.name,
-                price: this.state.price,
+                price: parseFloat(this.state.price),
                 tastingNotes: this.state.tastingNotes,
-                starRating: this.state.starRating,
-                varietal: this.state.varietals,
-                type: this.state.types
+                starRating: parseInt(this.state.starRating),
+                varietal: parseInt(this.state.varietal),
+                type: parseInt(this.state.type),
+                userId: this.activeUser
             };
 
             WineManager.post(wine)
-                .then(() => this.props.history.push("/wines"));
+                .then(() => this.props.history.push("/"));
         }
-
     };
+    
+    componentDidMount() {
+        const newState = {}
+        VarietalManager.getAll().then(varietals => {
+            newState.varietals = varietals
+        })
+            .then(() =>
+                TypeManager.getAll().then(types => {
+                    newState.types = types
+                })
+            )
+            .then(() => {
+                this.setState(newState)
+            })
 
+    }
     render() {
-        console.log(this.state)
+
         return (
             <>
                 <form>
@@ -54,9 +75,8 @@ class AddWineForm extends Component {
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="wineName"
+                                id="name"
                                 placeholder="Wine Name"
-                                value={this.state.name}
                             />
 
                             <label htmlFor="price">Price</label>
@@ -66,11 +86,10 @@ class AddWineForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="price"
                                 placeholder="Price"
-                                value={this.state.price}
                             />
 
                             <label htmlFor="Tasting Notes">Tasting Notes</label>
-                            <textarea name="message" rows="10" cols="30">
+                            <textarea id="tastingNotes" onChange={this.handleFieldChange} name="message" rows="10" cols="30">
                             </textarea>
 
                             <label htmlFor="Rating">Rating</label>
@@ -78,30 +97,34 @@ class AddWineForm extends Component {
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="rating"
+                                id="starRating"
                                 placeholder="Rate your wine from 1-5"
                             />
 
-                            <label htmlFor="Varietal">Varietal</label>
+                            <label htmlFor="Varietal">Varietal: </label>
                             <select
                                 defaultValue=""
                                 name="varietals"
-                                id="varietalSelect"
+                                id="varietal"
                                 onChange={this.handleFieldChange}>
-                                <option>Varietal: </option>
-                                    {this.state.varietals.map(varietal =>
-                                        <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
-                                            {varietal.varietal}
-                                        </option>
-                                        )}
+                                {this.state.varietals.map(varietal =>
+                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
+                                        {varietal.varietal}
+                                    </option>
+                                )}
                             </select>
 
-                            <label htmlFor="Type">Type</label>
-                            <select name="type">
-                                <option value="Red">Red</option>
-                                <option value="White">White</option>
-                                <option value="Bubbles">Bubbles</option>
-                                <option value="Rose">Rosé</option>
+                            <label htmlFor="Type">Type: </label>
+                            <select
+                                defaultValue=""
+                                name="types"
+                                id="type"
+                                onChange={this.handleFieldChange}>
+                                {this.state.types.map(type =>
+                                    <option className="var" key={type.id} id={type.type} value={type.id}>
+                                        {type.type}
+                                    </option>
+                                )}
                             </select>
 
                         </div>

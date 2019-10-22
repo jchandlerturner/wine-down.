@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import WineManager from '../../modules/WineManager'
+import WineCard from './WineCard'
+import VarietalManager from '../../modules/VarietalManager';
 
 class Home extends Component {
   state = {
@@ -29,6 +31,17 @@ class Home extends Component {
   //     }
 
   // };
+  deleteWine = id => {
+    WineManager.delete(id)
+        .then(() => {
+            WineManager.getAll()
+                .then((newWines) => {
+                    this.setState({
+                        wines: newWines
+                    })
+                })
+        })
+}
   getWine = () => {
     WineManager.getAll()
       .then((wines) => {
@@ -37,15 +50,43 @@ class Home extends Component {
         })
       })
   }
+
+  componentDidMount() {
+    const newState = {}
+    WineManager.getAll().then(wines => {
+        newState.wines = wines
+    })
+    //Sort + grab sub zero//
+        .then(() => {
+            this.setState(newState)
+        })
+
+}
   render() {
     return (
       <>
-      <p>This is home</p>
-      <button type="button"
-        className="btn"
-        onClick={() => { this.props.history.push("/wines/new") }}>
-        Add Wine
+        <p>This is home</p>
+        <button type="button"
+          className="btn"
+          onClick={() => { this.props.history.push("/wines/new") }}>
+          Add Wine
       </button>
+        <button type="button"
+          className="btn"
+          onClick={() => { this.props.history.push("/wines/edit") }}>
+          Edit Wine
+      </button>
+        <div className="cardContainer">
+          {this.state.wines.map(wine =>
+            <WineCard
+              key={wine.id}
+              myWine={wine}
+              wineName={wine.name}
+              deleteWine={this.deleteWine}
+              {...this.props}
+            />
+          )}
+        </div>
       </>
     )
   }
