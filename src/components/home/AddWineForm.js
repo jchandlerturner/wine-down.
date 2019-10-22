@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import WineManager from '../../modules/WineManager';
+import VarietalManager from '../../modules/VarietalManager'
 
 class AddWineForm extends Component {
     state = {
-        "name": "",
-        "price": 0,
-        "tastingNotes": "",
-        "starRating": 0,
-        "varietals": [],
-        "types": [],
-        "userId": 0,
+        name: "",
+        price: 0,
+        tastingNotes: "",
+        starRating: 0,
+        varietals: [],
+        types: [],
+        userId: 0,
+        varietal: 0
     };
 
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
+        console.log(stateToChange)
+        console.log(this.state)
     };
 
     /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
@@ -31,18 +35,25 @@ class AddWineForm extends Component {
                 price: this.state.price,
                 tastingNotes: this.state.tastingNotes,
                 starRating: this.state.starRating,
-                varietal: this.state.varietals,
+                varietal: this.state.varietal,
                 type: this.state.types
             };
 
             WineManager.post(wine)
                 .then(() => this.props.history.push("/wines"));
         }
-
     };
+    componentDidMount() {
+        VarietalManager.getAll()
+            .then(varietals => {
 
+                this.setState({
+                    varietals: varietals
+                });
+            });
+    }
     render() {
-        console.log(this.state)
+       
         return (
             <>
                 <form>
@@ -54,9 +65,8 @@ class AddWineForm extends Component {
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="wineName"
+                                id="name"
                                 placeholder="Wine Name"
-                                value={this.state.name}
                             />
 
                             <label htmlFor="price">Price</label>
@@ -66,7 +76,6 @@ class AddWineForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="price"
                                 placeholder="Price"
-                                value={this.state.price}
                             />
 
                             <label htmlFor="Tasting Notes">Tasting Notes</label>
@@ -86,14 +95,14 @@ class AddWineForm extends Component {
                             <select
                                 defaultValue=""
                                 name="varietals"
-                                id="varietalSelect"
+                                id="varietal"
                                 onChange={this.handleFieldChange}>
                                 <option>Varietal: </option>
-                                    {this.state.varietals.map(varietal =>
-                                        <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
-                                            {varietal.varietal}
-                                        </option>
-                                        )}
+                                {this.state.varietals.map(varietal =>
+                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
+                                        {varietal.varietal}
+                                    </option>
+                                )}
                             </select>
 
                             <label htmlFor="Type">Type</label>
