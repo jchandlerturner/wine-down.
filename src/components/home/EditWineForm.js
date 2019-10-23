@@ -13,7 +13,9 @@ class EditWineForm extends Component {
         types: [],
         userId: "",
         varietal: "",
-        type: ""
+        type: "",
+        id: "",
+        currentWine: {}
     };
 
     activeUser = parseInt(sessionStorage.getItem("userId"))
@@ -32,9 +34,10 @@ class EditWineForm extends Component {
             price: parseFloat(this.state.price),
             tastingNotes: this.state.tastingNotes,
             starRating: parseInt(this.state.starRating),
-            varietal: parseInt(this.state.varietal),
-            type: parseInt(this.state.type),
-            userId: this.activeUser
+            varietalId: parseInt(this.state.varietal),
+            typeId: parseInt(this.state.type),
+            userId: this.activeUser,
+            id: this.state.id
         };
 
         WineManager.update(editedWines)
@@ -51,14 +54,23 @@ class EditWineForm extends Component {
                     newState.types = types
                 })
             )
+            .then(() =>
+                WineManager.get(this.props.match.params.winesId).then(wine => {
+                 newState.currentWine = wine
+                 newState.name= wine.name
+                 newState.id = wine.id
+
+                })
+            )
             .then(() => {
                 this.setState(newState)
             })
 
+
     }
 
     render() {
-
+        console.log(this.state.currentWine)
         return (
             <>
                 <form>
@@ -72,6 +84,7 @@ class EditWineForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="name"
                                 placeholder="Wine Name"
+                                defaultValue={this.state.currentWine.name}
                             />
 
                             <label htmlFor="price">Price</label>
@@ -81,10 +94,11 @@ class EditWineForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="price"
                                 placeholder="Price"
+                                defaultValue={this.state.currentWine.price}
                             />
 
                             <label htmlFor="Tasting Notes">Tasting Notes</label>
-                            <textarea id="tastingNotes" onChange={this.handleFieldChange} name="message" rows="10" cols="30">
+                            <textarea id="tastingNotes" onChange={this.handleFieldChange} defaultValue={this.state.currentWine.tastingNotes} name="message" rows="10" cols="30">
                             </textarea>
 
                             <label htmlFor="Rating">Rating</label>
@@ -94,16 +108,20 @@ class EditWineForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="starRating"
                                 placeholder="Rate your wine from 1-5"
+                                defaultValue={this.state.currentWine.starRating}
                             />
 
-                            <label htmlFor="Varietal">Varietal: </label>
+
+                            {this.state.varietals.length > 0 ?
+                            <>
+                                <label htmlFor="Varietal">Varietal: </label>
                             <select
-                                defaultValue=""
+                                defaultValue={this.state.currentWine.varietalId}
                                 name="varietals"
                                 id="varietal"
                                 onChange={this.handleFieldChange}>
                                 {this.state.varietals.map(varietal =>
-                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
+                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id} >
                                         {varietal.varietal}
                                     </option>
                                 )}
@@ -111,7 +129,7 @@ class EditWineForm extends Component {
 
                             <label htmlFor="Type">Type: </label>
                             <select
-                                defaultValue=""
+                                defaultValue={this.state.currentWine.typeId}
                                 name="types"
                                 id="type"
                                 onChange={this.handleFieldChange}>
@@ -121,6 +139,9 @@ class EditWineForm extends Component {
                                     </option>
                                 )}
                             </select>
+                            </>
+                            :""
+                            }
 
                         </div>
                         <div className="alignRight">

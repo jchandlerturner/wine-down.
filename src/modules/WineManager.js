@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   get(id) {
-    return fetch(`${remoteURL}/wines/${id}`).then(result => result.json())
+    return fetch(`${remoteURL}/wines/${id}?_expand=type&_expand=varietal`).then(result => result.json())
   },
   getAll() {
     return fetch(`${remoteURL}/wines?_expand=type&_expand=varietal`).then(result => result.json())

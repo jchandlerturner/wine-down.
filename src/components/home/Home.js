@@ -71,11 +71,6 @@ class Home extends Component {
           onClick={() => { this.props.history.push("/wines/new") }}>
           Add Wine
       </button>
-        <button type="button"
-          className="btn"
-          onClick={() => { this.props.history.push("/wines/edit") }}>
-          Edit Wine
-      </button>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
             <WineCard
@@ -83,6 +78,8 @@ class Home extends Component {
               myWine={wine}
               wineName={wine.name}
               deleteWine={this.deleteWine}
+              wineId={wine.id}
+              typeId={wine.type.id}
               {...this.props}
             />
           )}

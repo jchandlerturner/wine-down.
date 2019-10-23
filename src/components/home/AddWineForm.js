@@ -13,9 +13,9 @@ class AddWineForm extends Component {
         types: [],
         userId: "",
         varietal: "",
-        type: ""
-    };
-
+        type: "",
+        id: "",
+    }
     activeUser = parseInt(sessionStorage.getItem("userId"))
 
     handleFieldChange = evt => {
@@ -37,16 +37,17 @@ class AddWineForm extends Component {
                 price: parseFloat(this.state.price),
                 tastingNotes: this.state.tastingNotes,
                 starRating: parseInt(this.state.starRating),
-                varietal: parseInt(this.state.varietal),
-                type: parseInt(this.state.type),
-                userId: this.activeUser
+                varietalId: parseInt(this.state.varietal),
+                typeId: parseInt(this.state.type),
+                userId: this.activeUser,
+                id: this.state.id
             };
 
             WineManager.post(wine)
                 .then(() => this.props.history.push("/"));
         }
     };
-    
+
     componentDidMount() {
         const newState = {}
         VarietalManager.getAll().then(varietals => {

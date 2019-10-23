@@ -15,22 +15,22 @@
   ],
   "wines": [
     {
-      "name": "KJ",
-      "price": 499,
-      "tastingNotes": "good",
-      "starRating": 5,
+      "name": "WOOOORRRK",
+      "price": 0,
+      "tastingNotes": "rrrr",
+      "starRating": null,
       "varietalId": 4,
       "typeId": 4,
       "userId": 2,
       "id": 12
     },
     {
-      "name": "red",
-      "price": 34,
-      "tastingNotes": "",
-      "starRating": null,
-      "varietalId": 1,
-      "typeId": 1,
+      "name": "Kendall Jackson",
+      "price": 10.99,
+      "tastingNotes": "Tastes nice",
+      "starRating": 5,
+      "varietalId": 4,
+      "typeId": 2,
       "userId": 2,
       "id": 13
     }
