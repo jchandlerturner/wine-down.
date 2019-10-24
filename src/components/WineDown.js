@@ -1,8 +1,9 @@
 /* dashboard*/
 import React, { Component } from "react";
 import ApplicationViews from "../ApplicationViews";
-// import SignUp from './auth/SignUp'
+import SignUp from './auth/SignUp'
 import Login from './auth/Login'
+import NavBar from './nav/NavBar'
 
 
 class WineDown extends Component {
@@ -44,15 +45,16 @@ class WineDown extends Component {
   render() {
     return (
       <React.Fragment>
-      {(this.state.user) ?
-        <>
-        <ApplicationViews clearUser={this.clearUser}/>
-        </>
-       :<><div className="logRegContainer">
-         <Login setUser={this.setUser}/>
-       {/* <SignUp setUser={this.setUser} /> */}
-       </div>
-       </>}
+        {(this.state.user) ?
+          <>
+            <NavBar user={this.state.user} clearUser={this.clearUser} />
+            <ApplicationViews clearUser={this.clearUser} />
+          </>
+          : <><div className="logRegContainer">
+            <Login setUser={this.setUser} />
+            <SignUp setUser={this.setUser} />
+          </div>
+          </>}
       </React.Fragment>
     );
   }

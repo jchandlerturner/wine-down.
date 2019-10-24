@@ -13,9 +13,9 @@ class AddWineForm extends Component {
         types: [],
         userId: "",
         varietal: "",
-        type: ""
-    };
-
+        type: "",
+        id: "",
+    }
     activeUser = parseInt(sessionStorage.getItem("userId"))
 
     handleFieldChange = evt => {
@@ -37,16 +37,17 @@ class AddWineForm extends Component {
                 price: parseFloat(this.state.price),
                 tastingNotes: this.state.tastingNotes,
                 starRating: parseInt(this.state.starRating),
-                varietal: parseInt(this.state.varietal),
-                type: parseInt(this.state.type),
-                userId: this.activeUser
+                varietalId: parseInt(this.state.varietal),
+                typeId: parseInt(this.state.type),
+                userId: this.activeUser,
+                id: this.state.id
             };
 
             WineManager.post(wine)
                 .then(() => this.props.history.push("/"));
         }
     };
-    
+
     componentDidMount() {
         const newState = {}
         VarietalManager.getAll().then(varietals => {
@@ -103,12 +104,12 @@ class AddWineForm extends Component {
 
                             <label htmlFor="Varietal">Varietal: </label>
                             <select
-                                defaultValue=""
                                 name="varietals"
                                 id="varietal"
                                 onChange={this.handleFieldChange}>
+                                <option>Select Varietal</option>
                                 {this.state.varietals.map(varietal =>
-                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id}>
+                                    <option key={varietal.id} id={varietal.varietal} value={varietal.id}>
                                         {varietal.varietal}
                                     </option>
                                 )}
@@ -116,12 +117,12 @@ class AddWineForm extends Component {
 
                             <label htmlFor="Type">Type: </label>
                             <select
-                                defaultValue=""
                                 name="types"
                                 id="type"
                                 onChange={this.handleFieldChange}>
+                                <option>Select Wine Type</option>
                                 {this.state.types.map(type =>
-                                    <option className="var" key={type.id} id={type.type} value={type.id}>
+                                    <option key={type.id} id={type.type} value={type.id}>
                                         {type.type}
                                     </option>
                                 )}

@@ -15,13 +15,13 @@ export default class ApplicationViews extends Component {
         return (
             <React.Fragment>
                 <Route exact path="/" render={(props) => {
-                    return <Home  {...props}/>
+                    return <Home  {...props} />
                 }} />
                 <Route exact path="/signup" render={(props) => {
                     return <SignUp {...props} />
                 }} />
                 <Route exact path="/browse" render={(props) => {
-                    return <BrowseList  {...props}/>
+                    return <BrowseList  {...props} />
                 }} />
                 <Route exact path="/profile" render={(props) => {
                     return <ProfileList clearUser={this.props.clearUser} {...props} />
@@ -30,7 +30,8 @@ export default class ApplicationViews extends Component {
                     return <AddWineForm {...props} />
                 }} />
                 <Route path="/wines/:winesId(\d+)/edit" render={(props) => {
-                    return <EditWineForm {...props} />
+                    return <EditWineForm {...props}
+                    />
                 }} />
             </React.Fragment>
         );
