@@ -30,5 +30,8 @@ update(editedWines) {
     },
     body: JSON.stringify(editedWines)
   }).then(data => data.json());
-}
+},
+getUserWine(wines, userId) {
+  return fetch(`${remoteURL}/${wines}?userId=${userId}&_expand=type&_expand=varietal`).then(result => result.json())
+},
 }

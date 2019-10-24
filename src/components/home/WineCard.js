@@ -12,7 +12,8 @@ class WineCard extends Component {
                     </picture>
                     <p><strong className="wineName">Name: </strong>{this.props.wineName}</p>
                     <p><strong>Price: </strong>{this.props.myWine.price}</p>
-                    <p><strong>Type: </strong>{this.props.typeId}</p>
+                    <p><strong>Type: </strong>{this.props.myWine.type.type}</p>
+                    <p><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
 
                     <button type="button"
                         onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>

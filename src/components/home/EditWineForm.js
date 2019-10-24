@@ -59,6 +59,11 @@ class EditWineForm extends Component {
                  newState.currentWine = wine
                  newState.name= wine.name
                  newState.id = wine.id
+                 newState.varietal = wine.varietalId
+                 newState.type = wine.typeId
+                 newState.userId = wine.userId
+                 newState.tastingNotes = wine.tastingNotes
+                 newState.starRating = wine.starRating
 
                 })
             )

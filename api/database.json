@@ -11,6 +11,12 @@
       "email": "chan@chan",
       "password": "chan",
       "id": 2
+    },
+    {
+      "name": "Butt",
+      "email": "butt@butt",
+      "password": "butt",
+      "id": 3
     }
   ],
   "wines": [
@@ -26,13 +32,23 @@
     },
     {
       "name": "Kendall Jackson",
-      "price": 10.99,
-      "tastingNotes": "Tastes nice",
+      "price": 0,
+      "tastingNotes": "Bice",
       "starRating": 5,
       "varietalId": 4,
       "typeId": 2,
       "userId": 2,
       "id": 13
+    },
+    {
+      "name": "wine 3 ",
+      "price": 2,
+      "tastingNotes": "",
+      "starRating": null,
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 3,
+      "id": 14
     }
   ],
   "varietals": [

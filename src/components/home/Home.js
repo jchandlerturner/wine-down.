@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import WineManager from '../../modules/WineManager'
 import WineCard from './WineCard'
 import VarietalManager from '../../modules/VarietalManager';
+import './Home.css'
+
 
 class Home extends Component {
   state = {
@@ -53,7 +55,7 @@ class Home extends Component {
 
   componentDidMount() {
     const newState = {}
-    WineManager.getAll().then(wines => {
+    WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
         newState.wines = wines
     })
     //Sort + grab sub zero//
