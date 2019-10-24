@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import EditWineForm from './EditWineForm'
+import './WineCard.css'
 
 class WineCard extends Component {
     render() {
@@ -14,10 +15,11 @@ class WineCard extends Component {
                     <p><strong>Price: </strong>{this.props.myWine.price}</p>
                     <p><strong>Type: </strong>{this.props.myWine.type.type}</p>
                     <p><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
-
+                    <div>
                     <button type="button"
                         onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>
                     <button type="button" onClick={() => this.props.deleteWine(this.props.wineId)}>Delete</button>
+                    </div>
                 </div>
             </div>
         );

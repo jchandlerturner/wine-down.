@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import WineManager from '../../modules/WineManager';
 import VarietalManager from '../../modules/VarietalManager'
 import TypeManager from '../../modules/TypeManager'
+import './WineCard.css'
+
 
 class EditWineForm extends Component {
     state = {
@@ -78,9 +80,10 @@ class EditWineForm extends Component {
         console.log(this.state.currentWine)
         return (
             <>
+            <div className="cardContent">
                 <form>
                     <fieldset>
-                        <div className="formgrid">
+                        <div className="formGrid">
 
                             <label htmlFor="wineName">Name</label>
                             <input
@@ -158,6 +161,7 @@ class EditWineForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
             </>
         )
     }

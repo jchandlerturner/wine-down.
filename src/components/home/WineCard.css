@@ -1,0 +1,21 @@
+.cardContent {
+    width: 267px;
+    height: 267px;
+    left: 54px;
+    top: 177px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    border-style: none;
+}

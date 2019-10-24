@@ -41,6 +41,16 @@
       "id": 13
     },
     {
+      "name": "WOOOORRRK",
+      "price": 0,
+      "tastingNotes": "rrrr",
+      "starRating": null,
+      "varietalId": 4,
+      "typeId": 4,
+      "userId": 2,
+      "id": 12
+    },
+    {
       "name": "wine 3 ",
       "price": 2,
       "tastingNotes": "",

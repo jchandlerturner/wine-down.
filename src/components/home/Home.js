@@ -67,7 +67,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <p>This is home</p>
         <button type="button"
           className="btn"
           onClick={() => { this.props.history.push("/wines/new") }}>
