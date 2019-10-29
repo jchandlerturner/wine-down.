@@ -33,6 +33,8 @@
 .bubbles {
     width: 100%;
     height: 100%;
+    border-right: white;
+    border-right-style: solid;
 }
 
 .rose {

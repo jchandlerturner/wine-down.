@@ -9,6 +9,7 @@ input {
     border-style: none;
     height: 2em;
 }
+
 .logoContainer {
     height: 50vh;
 }
@@ -19,10 +20,17 @@ input {
 
 .loginButton {
     align-items: center;
-    width: 50%;
+    width: 30%;
     text-transform: uppercase;
-    margin-left: 7em;
+    margin-left: 9.5em;
     margin-top: 1.5em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    padding-left: 7px;
+    letter-spacing: 2px;
 }
 
 .signupButton {
@@ -31,7 +39,7 @@ input {
     font-size: 12pt;
 }
 
-.loginform ,p {
+.loginform, p {
     margin-bottom: 0;
 }
 
