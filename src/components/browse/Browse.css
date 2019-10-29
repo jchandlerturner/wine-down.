@@ -1,0 +1,59 @@
+.headline {
+    text-align: center;
+}
+
+.browseSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.topRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomRow {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .reds {
+    width: 50vw;
+    height: 30vh;
+    border-width: .05rem;
+    text-decoration: none;
+} */
+
+.whites {
+    width: 100%;
+    height: 100%;
+}
+
+.bubbles {
+    width: 100%;
+    height: 100%;
+}
+
+.rose {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0em;
+}
+
+#wineIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.roseImgCenter {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Darker Grotesque', sans-serif;
+    color: #F3ECDF;
+    margin: 0;
+    font-size: 36.5pt;
+}

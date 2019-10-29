@@ -34,4 +34,14 @@ update(editedWines) {
 getUserWine(wines, userId) {
   return fetch(`${remoteURL}/${wines}?userId=${userId}&_expand=type&_expand=varietal`).then(result => result.json())
 },
+
+getRed(userId) {
+  return fetch(`${remoteURL}/wines?typeId=1&userId=${userId}&_expand=varietal`).then(result => result.json())
+},getWhite(userId) {
+  return fetch(`${remoteURL}/wines?typeId=2&userId=${userId}&_expand=varietal`).then(result => result.json())
+},getBubbles(userId) {
+  return fetch(`${remoteURL}/wines?typeId=3&userId=${userId}&_expand=varietal`).then(result => result.json())
+},getRose(userId) {
+  return fetch(`${remoteURL}/wines?typeId=4&userId=${userId}&_expand=varietal`).then(result => result.json())
+}
 }

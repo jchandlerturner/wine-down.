@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import LoginManager from "../../modules/LoginManager";
 import { Link, withRouter } from "react-router-dom"
+import './Login.css'
+
 
 
 class Login extends Component {
@@ -45,30 +47,31 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
+            <section className="loginBody">
+                <div className="logoContainer">
+                    <img id="mainLogo" src={require('./logoWD-01.png')} alt="My Dog" />
+                </div>
                 <form onSubmit={this.handleLogin}>
                     <fieldset>
-                        <h3>Please log in</h3>
-                        <div className="formgrid">
+                        <div className="loginForm">
+                            <p>Email: </p>
                             <input onChange={this.handleFieldChange} type="email"
                                 id="email"
-                                placeholder="Email address"
+                                placeholder=""
                                 required="" autoFocus="" />
-                            <label htmlFor="inputEmail">Email address</label>
-
+                            <p>Password: </p>
                             <input onChange={this.handleFieldChange} type="password"
                                 id="password"
-                                placeholder="Password"
+                                placeholder=""
                                 required="" />
-                            <label htmlFor="inputPassword">Password</label>
                         </div>
-                        <button type="submit" className="submit">
+                        <button type="submit" className="loginButton">
                             Log in
                 </button>
                     </fieldset>
                 </form>
-                {/* <Link className="nav-link" to="/signup">Not a member? Sign up here!</Link>  */}
-            </div>
+                <button className="signupButton" onClick={this.props.showSignUp}>Not a member? Sign up here!</button>
+            </section>
         )
     }
 }

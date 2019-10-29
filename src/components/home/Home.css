@@ -10,3 +10,10 @@ body {
 html {
     background-color: #FF584D;
 }
+
+
+
+#mainBody {
+    height: 80%;
+    overflow-y: scroll;
+}

@@ -9,6 +9,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .card {
@@ -18,4 +19,26 @@
 
 fieldset {
     border-style: none;
+}
+
+button {
+    height: 16px;
+    left: 160px;
+    top: 415px;
+    /* 6D1A2A */
+    background: #6D1A2A;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: white;
+    border-style: none;
+}
+
+.editCardContent {
+    position: absolute;
+    width: 267px;
+    height: 267px;
+    left: 54px;
+    top: 177px;
+    background: #FFFFFF;
+    border-radius: 28px;
 }

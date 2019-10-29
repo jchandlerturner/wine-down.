@@ -17,39 +17,15 @@
       "email": "butt@butt",
       "password": "butt",
       "id": 3
+    },
+    {
+      "name": "Chan",
+      "email": "jordan@jordan",
+      "password": "jordan",
+      "id": 4
     }
   ],
   "wines": [
-    {
-      "name": "WOOOORRRK",
-      "price": 0,
-      "tastingNotes": "rrrr",
-      "starRating": null,
-      "varietalId": 4,
-      "typeId": 4,
-      "userId": 2,
-      "id": 12
-    },
-    {
-      "name": "Kendall Jackson",
-      "price": 0,
-      "tastingNotes": "Bice",
-      "starRating": 5,
-      "varietalId": 4,
-      "typeId": 2,
-      "userId": 2,
-      "id": 13
-    },
-    {
-      "name": "WOOOORRRK",
-      "price": 0,
-      "tastingNotes": "rrrr",
-      "starRating": null,
-      "varietalId": 4,
-      "typeId": 4,
-      "userId": 2,
-      "id": 12
-    },
     {
       "name": "wine 3 ",
       "price": 2,
@@ -59,6 +35,26 @@
       "typeId": 1,
       "userId": 3,
       "id": 14
+    },
+    {
+      "name": "wine 4 ",
+      "price": 2,
+      "tastingNotes": "",
+      "starRating": null,
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 3,
+      "id": 14
+    },
+    {
+      "name": "Wine",
+      "price": 2222,
+      "tastingNotes": "lfklnfksadnf",
+      "starRating": null,
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 2,
+      "id": 15
     }
   ],
   "varietals": [

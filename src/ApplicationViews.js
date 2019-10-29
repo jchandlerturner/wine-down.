@@ -6,6 +6,10 @@ import ProfileList from './components/profile/ProfileList'
 import SignUp from './components/auth/SignUp'
 import AddWineForm from "./components/home/AddWineForm";
 import EditWineForm from "./components/home/EditWineForm";
+import RedList from './components/browse/RedList'
+import WhiteList from './components/browse/WhiteList'
+import BubblesList from './components/browse/BubblesList'
+import RoseList from './components/browse/RoseList'
 
 export default class ApplicationViews extends Component {
 
@@ -30,8 +34,19 @@ export default class ApplicationViews extends Component {
                     return <AddWineForm {...props} />
                 }} />
                 <Route path="/wines/:winesId(\d+)/edit" render={(props) => {
-                    return <EditWineForm {...props}
-                    />
+                    return <EditWineForm {...props} />
+                }} />
+                <Route exact path="/reds" render={(props) => {
+                    return <RedList {...props} />
+                }} />
+                <Route exact path="/whites" render={(props) => {
+                    return <WhiteList {...props} />
+                }} />
+                <Route exact path="/bubbles" render={(props) => {
+                    return <BubblesList {...props} />
+                }} />
+                <Route exact path="/rose" render={(props) => {
+                    return <RoseList {...props} />
                 }} />
             </React.Fragment>
         );

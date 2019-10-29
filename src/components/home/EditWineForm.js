@@ -80,7 +80,7 @@ class EditWineForm extends Component {
         console.log(this.state.currentWine)
         return (
             <>
-            <div className="cardContent">
+            <div className="editCardContent">
                 <form>
                     <fieldset>
                         <div className="formGrid">

@@ -1,0 +1,46 @@
+fieldset {
+    background-color: white;
+    margin: 2em 1.5em 0 1.5em;
+}
+
+input {
+    background-color: #F3ECDF;
+    width: 100%;
+    border-style: none;
+    height: 2em;
+}
+.logoContainer {
+    height: 50vh;
+}
+
+.loginForm {
+    margin: 0em 1.5em;
+}
+
+.loginButton {
+    align-items: center;
+    width: 50%;
+    text-transform: uppercase;
+    margin-left: 7em;
+    margin-top: 1.5em;
+}
+
+.signupButton {
+    background-color: #FF584D;
+    margin-left: 1em;
+    font-size: 12pt;
+}
+
+.loginform ,p {
+    margin-bottom: 0;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainLogo {
+    height: 15em;
+}
