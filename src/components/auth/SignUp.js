@@ -40,7 +40,10 @@ class SignUp extends Component {
                 LoginManager.createUser(newUser)
                     .then((createdUser) => {
                         //This determines which page you land on upon registration
-                        this.props.setUser(createdUser)
+                        this.props.setUser(createdUser); 
+                        sessionStorage.setItem("userId", createdUser.id);
+                        sessionStorage.setItem("email", this.state.email);
+                        sessionStorage.setItem("name", this.state.name);
                     }
                     )
             }
@@ -51,42 +54,42 @@ class SignUp extends Component {
     render() {
         return (
             <section id="signupBody">
-            <img id="homeIcon" onClick={this.props.showLogin} src={require('./backIcon-01.png')} alt="My Dog" />
-            <form id="signupContainer" onSubmit={this.handleRegister}>
-                <fieldset>
-                    <div className="signDiv">
-                    <h3>Sign Up!</h3>
-                    </div>
-                    <div className="SignupForm">
-                        <p>Email Address: </p>
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder=""
-                            required="" autoFocus="" />
+                <img id="homeIcon" onClick={this.props.showLogin} src={require('./backIcon-01.png')} alt="My Dog" />
+                <form id="signupContainer" onSubmit={this.handleRegister}>
+                    <fieldset>
+                        <div className="signDiv">
+                            <h3>Sign Up!</h3>
+                        </div>
+                        <div className="SignupForm">
+                            <p>Email Address: </p>
+                            <input onChange={this.handleFieldChange} type="email"
+                                id="email"
+                                placeholder=""
+                                required="" autoFocus="" />
 
-                        <p>Name: </p>
-                        <input onChange={this.handleFieldChange} type="name"
-                            id="name"
-                            placeholder=""
-                            required="" />
+                            <p>Name: </p>
+                            <input onChange={this.handleFieldChange} type="name"
+                                id="name"
+                                placeholder=""
+                                required="" />
 
-                        <p>Password: </p>
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder=""
-                            required="" />
+                            <p>Password: </p>
+                            <input onChange={this.handleFieldChange} type="password"
+                                id="password"
+                                placeholder=""
+                                required="" />
 
-                        <p>Confirm Password: </p>
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder=""
-                            required="" />
-                    </div>
-                    <button type="submit" className="reallySignUp">
-                        Sign Up
+                            <p>Confirm Password: </p>
+                            <input onChange={this.handleFieldChange} type="password"
+                                id="password"
+                                placeholder=""
+                                required="" />
+                        </div>
+                        <button type="submit" className="reallySignUp">
+                            Sign Up
             </button>
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
             </section>
         )
     }

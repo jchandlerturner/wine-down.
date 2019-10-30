@@ -17,56 +17,9 @@
       "email": "butt@butt",
       "password": "butt",
       "id": 3
-    },
-    {
-      "name": "Chan",
-      "email": "jordan@jordan",
-      "password": "jordan",
-      "id": 4
     }
   ],
-  "wines": [
-    {
-      "name": "wine 3 ",
-      "price": 2,
-      "tastingNotes": "",
-      "starRating": null,
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 3,
-      "id": 14
-    },
-    {
-      "name": "wine 4 ",
-      "price": 2,
-      "tastingNotes": "",
-      "starRating": null,
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 3,
-      "id": 14
-    },
-    {
-      "name": "Wine",
-      "price": 0,
-      "tastingNotes": "lfklnfksadnf",
-      "starRating": null,
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 2,
-      "id": 15
-    },
-    {
-      "name": "Gradi ",
-      "price": null,
-      "tastingNotes": "",
-      "starRating": 5,
-      "varietalId": 2,
-      "typeId": 2,
-      "userId": 2,
-      "id": 16
-    }
-  ],
+  "wines": [],
   "varietals": [
     {
       "varietal": "Cabernet Sauvignon",

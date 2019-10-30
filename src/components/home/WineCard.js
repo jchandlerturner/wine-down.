@@ -6,11 +6,11 @@ import './WineCard.css'
 class WineCard extends Component {
     render() {
         return (
-            <div className="card">
-                <div className="cardContent">
+            <div className="mainCard">
+                <div id="cardContent">
                     <div className="imageContainer">
                         <picture>
-                        <img id="redCardIcon" onClick={this.props.showLogin} src={require('./wineIconRed-01.png')} alt="My Dog" />
+                        <img id="redCardIcon" src={require('./wineIconRed-01.png')} alt="My Dog" />
                         </picture>
                     </div>
                     <div className="textContent">

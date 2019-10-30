@@ -58,14 +58,14 @@ class EditWineForm extends Component {
             )
             .then(() =>
                 WineManager.get(this.props.match.params.winesId).then(wine => {
-                 newState.currentWine = wine
-                 newState.name= wine.name
-                 newState.id = wine.id
-                 newState.varietal = wine.varietalId
-                 newState.type = wine.typeId
-                 newState.userId = wine.userId
-                 newState.tastingNotes = wine.tastingNotes
-                 newState.starRating = wine.starRating
+                    newState.currentWine = wine
+                    newState.name = wine.name
+                    newState.id = wine.id
+                    newState.varietal = wine.varietalId
+                    newState.type = wine.typeId
+                    newState.userId = wine.userId
+                    newState.tastingNotes = wine.tastingNotes
+                    newState.starRating = wine.starRating
 
                 })
             )
@@ -80,89 +80,94 @@ class EditWineForm extends Component {
         console.log(this.state.currentWine)
         return (
             <>
-            <div className="editCardContent">
-                <form>
-                    <fieldset>
-                        <div className="formGrid">
+                <section className="editBody">
+                    <div className="editCardContent">
+                        <form>
+                            <fieldset>
+                                <div className="editForm">
 
-                            <label htmlFor="wineName">Name</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="name"
-                                placeholder="Wine Name"
-                                defaultValue={this.state.currentWine.name}
-                            />
+                                    <label htmlFor="wineName">Name: </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        onChange={this.handleFieldChange}
+                                        id="name"
+                                        placeholder="Wine Name"
+                                        defaultValue={this.state.currentWine.name}
+                                    />
 
-                            <label htmlFor="price">Price</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="price"
-                                placeholder="Price"
-                                defaultValue={this.state.currentWine.price}
-                            />
+                                    <label htmlFor="price">Price: </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        onChange={this.handleFieldChange}
+                                        id="price"
+                                        placeholder="Price"
+                                        defaultValue={this.state.currentWine.price}
+                                    />
 
-                            <label htmlFor="Tasting Notes">Tasting Notes</label>
-                            <textarea id="tastingNotes" onChange={this.handleFieldChange} defaultValue={this.state.currentWine.tastingNotes} name="message" rows="10" cols="30">
-                            </textarea>
+                                    <label htmlFor="Tasting Notes">Tasting Notes: </label>
+                                    <textarea id="tastingNotes" onChange={this.handleFieldChange} defaultValue={this.state.currentWine.tastingNotes} name="message" rows="10" cols="30">
+                                    </textarea>
 
-                            <label htmlFor="Rating">Rating</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="starRating"
-                                placeholder="Rate your wine from 1-5"
-                                defaultValue={this.state.currentWine.starRating}
-                            />
+                                    <label htmlFor="Rating">Rating: </label>
+                                    <br></br>
+                                    <input
+                                        type="text"
+                                        required
+                                        onChange={this.handleFieldChange}
+                                        id="starRating"
+                                        placeholder="Rate your wine from 1-5"
+                                        defaultValue={this.state.currentWine.starRating}
+                                    />
 
+                                    <br></br>
+                                    {this.state.varietals.length > 0 ?
+                                        <>
+                                            <label id="varietalSelect" htmlFor="Varietal">Varietal: </label>
+                                            <select
+                                                defaultValue={this.state.currentWine.varietalId}
+                                                name="varietals"
+                                                id="varietal"
+                                                onChange={this.handleFieldChange}>
+                                                {this.state.varietals.map(varietal =>
+                                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id} >
+                                                        {varietal.varietal}
+                                                    </option>
+                                                )}
+                                            </select>
+                                            <br></br>
 
-                            {this.state.varietals.length > 0 ?
-                            <>
-                                <label htmlFor="Varietal">Varietal: </label>
-                            <select
-                                defaultValue={this.state.currentWine.varietalId}
-                                name="varietals"
-                                id="varietal"
-                                onChange={this.handleFieldChange}>
-                                {this.state.varietals.map(varietal =>
-                                    <option className="var" key={varietal.id} id={varietal.varietal} value={varietal.id} >
-                                        {varietal.varietal}
-                                    </option>
-                                )}
-                            </select>
+                                            <label htmlFor="Type">Type: </label>
+                                            <select
+                                                defaultValue={this.state.currentWine.typeId}
+                                                name="types"
+                                                id="type"
+                                                onChange={this.handleFieldChange}>
+                                                {this.state.types.map(type =>
+                                                    <option className="var" key={type.id} id={type.type} value={type.id}>
+                                                        {type.type}
+                                                    </option>
+                                                )}
+                                            </select>
+                                        </>
+                                        : ""
+                                    }
 
-                            <label htmlFor="Type">Type: </label>
-                            <select
-                                defaultValue={this.state.currentWine.typeId}
-                                name="types"
-                                id="type"
-                                onChange={this.handleFieldChange}>
-                                {this.state.types.map(type =>
-                                    <option className="var" key={type.id} id={type.type} value={type.id}>
-                                        {type.type}
-                                    </option>
-                                )}
-                            </select>
-                            </>
-                            :""
-                            }
-
-                        </div>
-                        <div className="alignRight">
-                            <button
-                                type="button"
-                                disabled={this.state.loadingStatus}
-                                onClick={this.updateWine}
-                            >Save Changes</button>
-                        </div>
-                    </fieldset>
-                </form>
-                </div>
+                                </div>
+                                <div className="alignRight">
+                                    <button
+                                        type="button"
+                                        disabled={this.state.loadingStatus}
+                                        onClick={this.updateWine}
+                                    >Save Changes</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
             </>
+
         )
     }
 }
