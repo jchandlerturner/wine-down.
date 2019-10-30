@@ -10,11 +10,13 @@
     flex-direction: column;
     text-align: center;
     margin-bottom: 1rem;
+    flex-direction: row;
 }
 
 .card {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 fieldset {
@@ -41,4 +43,37 @@ button {
     top: 177px;
     background: #FFFFFF;
     border-radius: 28px;
+}
+
+.textContent {
+    text-align: left;
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #F3ECDF;
+}
+
+#redCardIcon {
+    height: 200px;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.cardText {
+    
+    margin-right: .5em;
+    margin-bottom: .25em;
+}
+
+.cardButtons {
+    margin-top: 2em;
+}
+
+.editButton {
+    margin-right: .5em;
+}
+
+.deleteButton {
+    background-color: white;
+    color: #6D1A2A;
 }

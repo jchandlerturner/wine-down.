@@ -8,17 +8,21 @@ class WineCard extends Component {
         return (
             <div className="card">
                 <div className="cardContent">
-                    <picture>
-                        <p>wine img</p>
-                    </picture>
-                    <p><strong className="wineName">Name: </strong>{this.props.wineName}</p>
-                    <p><strong>Price: </strong>{this.props.myWine.price}</p>
-                    <p><strong>Type: </strong>{this.props.myWine.type.type}</p>
-                    <p><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
-                    <div>
-                    <button type="button"
-                        onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>
-                    <button type="button" onClick={() => this.props.deleteWine(this.props.wineId)}>Delete</button>
+                    <div className="imageContainer">
+                        <picture>
+                        <img id="redCardIcon" onClick={this.props.showLogin} src={require('./wineIconRed-01.png')} alt="My Dog" />
+                        </picture>
+                    </div>
+                    <div className="textContent">
+                        <p className="cardText"><strong>Name: </strong>{this.props.wineName}</p>
+                        <p className="cardText"><strong>Price: </strong>{this.props.myWine.price}</p>
+                        <p className="cardText"><strong>Type: </strong>{this.props.myWine.type.type}</p>
+                        <p className="cardText"><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
+                        <div className="cardButtons">
+                            <button type="button" className="editButton"
+                                onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>
+                            <button type="button" className="deleteButton" onClick={() => this.props.deleteWine(this.props.wineId)}>Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>

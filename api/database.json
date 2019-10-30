@@ -55,6 +55,16 @@
       "typeId": 1,
       "userId": 2,
       "id": 15
+    },
+    {
+      "name": "Gradi ",
+      "price": null,
+      "tastingNotes": "",
+      "starRating": 5,
+      "varietalId": 2,
+      "typeId": 2,
+      "userId": 2,
+      "id": 16
     }
   ],
   "varietals": [
