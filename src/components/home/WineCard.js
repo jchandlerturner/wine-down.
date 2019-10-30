@@ -4,14 +4,27 @@ import EditWineForm from './EditWineForm'
 import './WineCard.css'
 
 class WineCard extends Component {
+
+    cardDisplay = () => {
+        console.log("cardDisplay")
+        if (this.props.myWine.typeId === 1) {
+            return (<img id="cardIcon" src={require('./wineIconRed.png')} alt="My Dog" />
+            )
+        } else if (this.props.myWine.typeId=== 2) {
+            return (<img id="cardIcon" src={require('./wineIconWhite-01.png')} alt="My Dog" />)
+        } else if (this.props.myWine.typeId=== 4) {
+            return (<img id="cardIcon" src={require('./wineIconRose-01.png')} alt="My Dog" />)
+        } else if (this.props.myWine.typeId=== 3) {
+            return (<img id="cardIcon" src={require('./wineIconBubbles-01.png')} alt="My Dog" />)
+        } 
+
+    }
     render() {
         return (
             <div className="mainCard">
                 <div id="cardContent">
                     <div className="imageContainer">
-                        <picture>
-                        <img id="redCardIcon" src={require('./wineIconRed-01.png')} alt="My Dog" />
-                        </picture>
+                            {this.cardDisplay()}
                     </div>
                     <div className="textContent">
                         <p className="cardText"><strong>Name: </strong>{this.props.wineName}</p>

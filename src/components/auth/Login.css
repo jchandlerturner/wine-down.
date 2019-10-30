@@ -22,8 +22,8 @@ input {
     align-items: center;
     width: 30%;
     text-transform: uppercase;
-    margin-left: 9.5em;
-    margin-top: 1.5em;
+    margin-left: 5.5em;
+    margin-top: 1em;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700;
     padding-top: 2px;
@@ -31,12 +31,19 @@ input {
     padding-right: 7px;
     padding-left: 7px;
     letter-spacing: 2px;
+    height: 2em;
+    font-size: 14pt;
 }
 
 .signupButton {
-    background-color: #FF584D;
-    margin-left: 1em;
-    font-size: 12pt;
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: white;
+    margin-left: 0;
+    font-size: 14pt;
+    color: #6D1A2A;
+    margin-bottom: 0;
+    padding: 0;
+    font-weight: 500;
 }
 
 .loginform, p {
@@ -51,4 +58,20 @@ input {
 
 #mainLogo {
     height: 15em;
+}
+
+.loginBody {
+    background-image: url(./loginBackground-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 667px;
+    width: 375px;
+}
+
+#signupBody {
+    background-image: url(./signupBackground-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 667px;
+    width: 375px;
 }

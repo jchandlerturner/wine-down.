@@ -52,7 +52,7 @@ class Login extends Component {
                     <img id="mainLogo" src={require('./logoWD-01.png')} alt="My Dog" />
                 </div>
                 <form onSubmit={this.handleLogin}>
-                    <fieldset>
+                    <fieldset> 
                         <div className="loginForm">
                             <p>Email: </p>
                             <input onChange={this.handleFieldChange} type="email"
@@ -68,9 +68,9 @@ class Login extends Component {
                         <button type="submit" className="loginButton">
                             Log in
                 </button>
+                <button className="signupButton" onClick={this.props.showSignUp}>Not a member? Sign up here!</button>
                     </fieldset>
                 </form>
-                <button className="signupButton" onClick={this.props.showSignUp}>Not a member? Sign up here!</button>
             </section>
         )
     }

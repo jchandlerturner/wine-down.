@@ -18,40 +18,36 @@
     flex-direction: row;
 }
 
-/* .reds {
-    width: 50vw;
-    height: 30vh;
-    border-width: .05rem;
-    text-decoration: none;
-} */
-
 .whites {
-    width: 100%;
-    height: 100%;
+    background-image: url(./whiteDiv-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 667px;
+    width: 375px; */
 }
 
 .bubbles {
-    width: 100%;
-    height: 100%;
-    border-right: white;
-    border-right-style: solid;
+    background-image: url(./bubblesDiv-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 667px;
+    width: 375px; */
 }
 
 .rose {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0em;
+    background-image: url(./roseDiv-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 667px;
+    width: 375px; */
 }
 
-#wineIcon {
-    width: 100%;
-    height: 100%;
-    margin-top: 0;
-}
-
-.roseImgCenter {
-    width: 100%;
-    height: 100%;
+.reds {
+    background-image: url(./redDiv-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 667px;
+    width: 375px; */
 }
 
 h1 {

@@ -8,18 +8,16 @@ class BrowseList extends Component {
     return (
       <div>
         <div className="headline">
-          <h1>BROWSE</h1>
-          <h1>WINES</h1>
-          <br></br>
+          <h1>BROWSE<br></br> WINES</h1>
         </div>
         <section className="browseSection">
           <div className="topRow">
-            <div className="roseImgCenter" onClick={() => { this.props.history.push("/reds") }}><h3></h3><img id="wineIcon" src={require('./redDiv-01.png')} alt="My Dog" /></div>
-            <div className="whites" onClick={() => { this.props.history.push("/whites") }}><h3></h3><img id="wineIcon" src={require('./whiteDiv-01.png')} alt="My Dog" /></div>
+            <div className="reds" onClick={() => { this.props.history.push("/reds") }}><h3></h3></div>
+            <div className="whites" onClick={() => { this.props.history.push("/whites") }}><h3></h3></div>
           </div>
           <div className="bottomRow">
-            <div className="bubbles" onClick={() => { this.props.history.push("/bubbles") }}><h3></h3><img id="wineIcon" src={require('./bubblesDiv-01.png')} alt="My Dog" /></div>
-            <div className="rose" onClick={() => { this.props.history.push("/rose") }}><h3></h3><img id="wineIcon" src={require('./roseDiv-01.png')} alt="My Dog" /></div>
+            <div className="bubbles" onClick={() => { this.props.history.push("/bubbles") }}><h3></h3></div>
+            <div className="rose" onClick={() => { this.props.history.push("/rose") }}><h3></h3></div>
           </div>
         </section>
       </div>

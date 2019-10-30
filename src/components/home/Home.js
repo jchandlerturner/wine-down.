@@ -73,6 +73,9 @@ class Home extends Component {
           onClick={() => { this.props.history.push("/wines/new") }}>
           Add Wine
       </button>
+        <div className="homeHead">
+          <h3>your recent wines</h3>
+        </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
             <WineCard

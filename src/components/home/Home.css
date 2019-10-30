@@ -12,9 +12,12 @@ html {
     height: 100vh;
 }
 
-/* p {
-    font-family: 'Raleway', sans-serif;
-} */
+p {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14pt;
+}
 
 h3 {
     font-family: 'Darker Grotesque', sans-serif;
