@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import LoginManager from '../../modules/LoginManager'
+import './SignUp.css'
 
 
 class SignUp extends Component {
@@ -39,7 +40,10 @@ class SignUp extends Component {
                 LoginManager.createUser(newUser)
                     .then((createdUser) => {
                         //This determines which page you land on upon registration
-                        this.props.setUser(createdUser)
+                        this.props.setUser(createdUser); 
+                        sessionStorage.setItem("userId", createdUser.id);
+                        sessionStorage.setItem("email", this.state.email);
+                        sessionStorage.setItem("name", this.state.name);
                     }
                     )
             }
@@ -49,39 +53,44 @@ class SignUp extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleRegister}>
-                <fieldset>
-                    <h3>Sign Up!</h3>
-                    <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="name"
-                            id="name"
-                            placeholder="First Name"
-                            required="" />
-                        <label htmlFor="inputName">Name</label>
+            <section id="signupBody">
+                <img id="homeIcon" onClick={this.props.showLogin} src={require('./backIcon-01.png')} alt="My Dog" />
+                <form id="signupContainer" onSubmit={this.handleRegister}>
+                    <fieldset id="signupFieldset">
+                        <div className="signDiv">
+                            <h3 class="signupHeader">Sign Up!</h3>
+                        </div>
+                        <div className="SignupForm">
+                            <p>Email Address: </p>
+                            <input onChange={this.handleFieldChange} type="email"
+                                id="email"
+                                placeholder=""
+                                required="" autoFocus="" />
 
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder="Email address"
-                            required="" autoFocus="" />
-                        <label htmlFor="inputEmail">Email address</label>
+                            <p>Name: </p>
+                            <input onChange={this.handleFieldChange} type="name"
+                                id="name"
+                                placeholder=""
+                                required="" />
 
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Password</label>
+                            <p>Password: </p>
+                            <input onChange={this.handleFieldChange} type="password"
+                                id="password"
+                                placeholder=""
+                                required="" />
 
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Confirm Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Confirm Password</label>
-                    </div>
-                    <button type="submit" className="submit">
-                        Sign Up
+                            <p>Confirm Password: </p>
+                            <input onChange={this.handleFieldChange} type="password"
+                                id="password"
+                                placeholder=""
+                                required="" />
+                        </div>
+                        <button type="submit" className="reallySignUp">
+                            Drink up
             </button>
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
+            </section>
         )
     }
 

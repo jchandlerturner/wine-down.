@@ -1,6 +1,6 @@
-.cardContent {
-    width: 267px;
-    height: 267px;
+#cardContent {
+    width: 300px;
+    height: 300px;
     left: 54px;
     top: 177px;
     background: #FFFFFF;
@@ -9,13 +9,99 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 1rem;
+    flex-direction: row;
 }
 
-.card {
+.mainCard {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 fieldset {
     border-style: none;
+}
+
+button {
+    height: 16px;
+    left: 160px;
+    top: 415px;
+    /* 6D1A2A */
+    background: #6D1A2A;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: white;
+    border-style: none;
+}
+
+.editCardContent {
+    width: 350px;
+    height: 350px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    margin-top: 7em;
+}
+
+.textContent {
+    text-align: left;
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #F3ECDF;
+    width: 202.05px;
+}
+
+#cardIcon {
+    height: 200px;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.cardText {
+    margin-right: .5em;
+    margin-bottom: .25em;
+}
+
+.cardButtons {
+    margin-top: 2em;
+}
+
+.editButton {
+    margin-right: .5em;
+}
+
+.deleteButton {
+    background-color: white;
+    color: #6D1A2A;
+}
+
+.editBody {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    width: 286px;
+    height: 48px;
+    background-color: #F3ECDF;
+    border-style: none;
+}
+
+#starRating {
+    width: 150px;
+}
+
+#varietal {
+    background-color: #F3ECDF;
+    border-style: none;
+}
+
+#type {
+    background-color: #F3ECDF;
+    border-style: none;
+}
+
+label {
+    margin-top: 1em;
 }

@@ -8,7 +8,9 @@ import NavBar from './nav/NavBar'
 
 class WineDown extends Component {
   state = {
-    user: false
+    user: false,
+    showSignUp: false,
+    showLogin: true
   }
   // Check if credentials are in local storage
   //returns true/false
@@ -41,6 +43,16 @@ class WineDown extends Component {
       user: this.isAuthenticated()
     })
   }
+  showSignUp=() => {
+    this.setState({
+      showSignUp: true
+    })
+  }
+  showLogin=() => {
+    this.setState({
+      showSignUp: false
+    })
+  }
 
   render() {
     return (
@@ -51,8 +63,9 @@ class WineDown extends Component {
             <ApplicationViews clearUser={this.clearUser} />
           </>
           : <><div className="logRegContainer">
-            <Login setUser={this.setUser} />
-            <SignUp setUser={this.setUser} />
+          {(this.state.showSignUp) ?
+            <SignUp setUser={this.setUser} showLogin={this.showLogin}/>
+            :<Login setUser={this.setUser} showSignUp={this.showSignUp}/> }
           </div>
           </>}
       </React.Fragment>

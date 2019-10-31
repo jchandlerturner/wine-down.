@@ -20,18 +20,18 @@ nav {
   width: 100%;
   margin-bottom: 0;
   background-color: #F3ECDF;
-  height: 20vw;
+  height: 12.15vh;
 }
 
 nav .container {
   display: flex;
   padding: 0;
-  margin-bottom: 0;
+  margin-bottom: 5em;
 }
 
 nav .container li {
   flex: 1;
-  padding: 10px;
+  padding: -5px;
   text-align: center;
   font-size: 1.5em;
   color: white;
@@ -41,6 +41,8 @@ nav .container li {
   font-family: 'Raleway', sans-serif;
   margin-top: 0;
   margin-left: 0;
+  margin-bottom: 20px;
+  
 }
 
 nav .container a {
@@ -54,14 +56,23 @@ nav .container a:hover {
   color: white;
 }
 
-picture {
-  height: 153.59px;
-  width: auto;
-}
 
 .site-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 0;
+}
+
+#homeIcon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.homeIcon {
+  margin-bottom: 100em;
+}
+
+ul {
+  margin: 0;
 }

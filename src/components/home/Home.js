@@ -67,11 +67,15 @@ class Home extends Component {
   render() {
     return (
       <>
+      <section id="mainBody">
         <button type="button"
           className="btn"
           onClick={() => { this.props.history.push("/wines/new") }}>
           Add Wine
       </button>
+        <div className="homeHead">
+          <h3>your recent wines</h3>
+        </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
             <WineCard
@@ -85,7 +89,9 @@ class Home extends Component {
             />
           )}
         </div>
+        </section>
       </>
+      
     )
   }
 }
