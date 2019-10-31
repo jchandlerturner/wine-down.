@@ -24,15 +24,15 @@
       "name": "Sage",
       "price": 0,
       "tastingNotes": "very nice but spicy ",
-      "starRating": null,
+      "starRating": 4,
       "varietalId": 1,
       "typeId": 4,
       "userId": 2,
       "id": 1
     },
     {
-      "name": "KJ",
-      "price": 3.22,
+      "name": "Leigh",
+      "price": 0,
       "tastingNotes": "Nice",
       "starRating": 3,
       "varietalId": 1,
@@ -42,7 +42,7 @@
     },
     {
       "name": "White",
-      "price": 2.99,
+      "price": 0,
       "tastingNotes": "White wine tasty",
       "starRating": 3,
       "varietalId": 1,

@@ -6,7 +6,6 @@ import './WineCard.css'
 class WineCard extends Component {
 
     cardDisplay = () => {
-        console.log("cardDisplay")
         if (this.props.myWine.typeId === 1) {
             return (<img id="cardIcon" src={require('./wineIconRed.png')} alt="My Dog" />
             )

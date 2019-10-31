@@ -7,7 +7,7 @@ input {
     background-color: #F3ECDF;
     width: 100%;
     border-style: none;
-    height: 2em;
+    height: 2.5em;
 }
 
 .logoContainer {
@@ -74,4 +74,37 @@ input {
     background-size: cover;
     height: 667px;
     width: 375px;
+}
+
+#signupFieldset {
+    height: 30em;
+    margin-bottom: 2em;
+}
+
+#signupContainer {
+    margin: 0;
+}
+
+.signupHeader {
+    margin-bottom: 2em;
+    font-size: 20pt;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.reallySignUp {
+    align-items: center;
+    width: 50%;
+    text-transform: uppercase;
+    margin-left: 4em;
+    margin-top: 2em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    padding-left: 7px;
+    letter-spacing: 2px;
+    height: 2em;
+    font-size: 14pt;
 }

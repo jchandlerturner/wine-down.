@@ -56,9 +56,9 @@ class SignUp extends Component {
             <section id="signupBody">
                 <img id="homeIcon" onClick={this.props.showLogin} src={require('./backIcon-01.png')} alt="My Dog" />
                 <form id="signupContainer" onSubmit={this.handleRegister}>
-                    <fieldset>
+                    <fieldset id="signupFieldset">
                         <div className="signDiv">
-                            <h3>Sign Up!</h3>
+                            <h3 class="signupHeader">Sign Up!</h3>
                         </div>
                         <div className="SignupForm">
                             <p>Email Address: </p>
@@ -86,7 +86,7 @@ class SignUp extends Component {
                                 required="" />
                         </div>
                         <button type="submit" className="reallySignUp">
-                            Sign Up
+                            Drink up
             </button>
                     </fieldset>
                 </form>

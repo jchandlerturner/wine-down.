@@ -4,18 +4,21 @@
 
 .browseSection {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    width: 100% !important;
+    height: 300px !important;
 }
 
 .topRow {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
 }
 
 .bottomRow {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
 }
 
 .whites {
@@ -38,16 +41,16 @@
     background-image: url(./roseDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 667px;
-    width: 375px; */
+    width: 125px;
+    height: 125px;
 }
 
 .reds {
     background-image: url(./redDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 667px;
-    width: 375px; */
+
+    
 }
 
 h1 {
