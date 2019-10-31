@@ -45,7 +45,7 @@ getRed(userId) {
   return fetch(`${remoteURL}/wines?typeId=4&userId=${userId}&_expand=varietal`).then(result => result.json())
 },
 updateRating(editedWines) {
-  return fetch(`${remoteURL}/wines/${editedWines.starRating}`, {
+  return fetch(`${remoteURL}/wines/${editedWines.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"

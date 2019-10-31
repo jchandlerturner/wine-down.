@@ -3,6 +3,7 @@ import WineManager from '../../modules/WineManager'
 import WineCard from './WineCard'
 import VarietalManager from '../../modules/VarietalManager';
 import './Home.css'
+import { parse } from 'url';
 
 
 class Home extends Component {
@@ -54,17 +55,18 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const newState = {}
+    console.log("home component is MOUNTED YO")
+    console.log("this is what is in session storage when called on", parseInt(sessionStorage.getItem("userId")))
     WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
-        newState.wines = wines
+      console.log("these are the wines returned in the fetch call", wines)
+      
+       this.setState({wines:wines})
     })
-    //Sort + grab sub zero//
-        .then(() => {
-            this.setState(newState)
-        })
+    .then(() => console.log(this.state))
 
 }
   render() {
+    console.log("home render is triggered")
     return (
       <>
       <section id="mainBody">
