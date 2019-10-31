@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import WineManager from '../../modules/WineManager';
 import VarietalManager from '../../modules/VarietalManager'
 import TypeManager from '../../modules/TypeManager'
+import Rating from "react-rating"
 
 class AddWineForm extends Component {
     state = {
@@ -94,14 +95,14 @@ class AddWineForm extends Component {
                             </textarea>
 
                             <label htmlFor="Rating">Rating</label>
-                            <input
+                            {/* <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="starRating"
                                 placeholder="Rate your wine from 1-5"
-                            />
-
+                            /> */}
+                            <Rating />
                             <label htmlFor="Varietal">Varietal: </label>
                             <select
                                 name="varietals"

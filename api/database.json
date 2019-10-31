@@ -21,16 +21,6 @@
   ],
   "wines": [
     {
-      "name": "Sage",
-      "price": 0,
-      "tastingNotes": "very nice but spicy ",
-      "starRating": 4,
-      "varietalId": 1,
-      "typeId": 4,
-      "userId": 2,
-      "id": 1
-    },
-    {
       "name": "Leigh",
       "price": 0,
       "tastingNotes": "Nice",
@@ -59,6 +49,26 @@
       "typeId": 3,
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "Wne",
+      "price": 3.44,
+      "tastingNotes": "",
+      "starRating": null,
+      "varietalId": 2,
+      "typeId": 1,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "Kendall Jackson",
+      "price": 2,
+      "tastingNotes": "Tastes really good! Floral and light—paired well with pasta and red sauce. ",
+      "starRating": null,
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 2,
+      "id": 6
     }
   ],
   "varietals": [

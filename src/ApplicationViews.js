@@ -10,6 +10,7 @@ import RedList from './components/browse/RedList'
 import WhiteList from './components/browse/WhiteList'
 import BubblesList from './components/browse/BubblesList'
 import RoseList from './components/browse/RoseList'
+import Login from "./components/auth/Login";
 
 export default class ApplicationViews extends Component {
 
@@ -20,6 +21,9 @@ export default class ApplicationViews extends Component {
             <React.Fragment>
                 <Route exact path="/" render={(props) => {
                     return <Home  {...props} />
+                }} />
+                <Route exact path="/login" render={(props) => {
+                    return <Login  {...props} />
                 }} />
                 <Route exact path="/signup" render={(props) => {
                     return <SignUp {...props} />

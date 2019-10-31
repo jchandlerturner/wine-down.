@@ -1,6 +1,6 @@
 #cardContent {
-    width: 300px;
-    height: 300px;
+    width: 335px;
+    height: 450px;
     left: 54px;
     top: 177px;
     background: #FFFFFF;
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 75px;
 }
 
 fieldset {
@@ -61,6 +62,7 @@ button {
 .cardText {
     margin-right: .5em;
     margin-bottom: .25em;
+    margin-top: .25em;
 }
 
 .cardButtons {

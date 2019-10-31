@@ -34,6 +34,7 @@ class Login extends Component {
             } else if (this.state.password === "") {
                 window.alert("Please enter password")
             } else if (singleUser) {
+                console.log("else if triggered")
                 this.props.setUser(singleUser);
                 sessionStorage.setItem("userId", singleUser.id);
                 sessionStorage.setItem("email", this.state.email);

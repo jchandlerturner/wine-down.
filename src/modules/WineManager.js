@@ -43,5 +43,14 @@ getRed(userId) {
   return fetch(`${remoteURL}/wines?typeId=3&userId=${userId}&_expand=varietal`).then(result => result.json())
 },getRose(userId) {
   return fetch(`${remoteURL}/wines?typeId=4&userId=${userId}&_expand=varietal`).then(result => result.json())
-}
+},
+updateRating(editedWines) {
+  return fetch(`${remoteURL}/wines/${editedWines.starRating}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedWines)
+  }).then(data => data.json());
+},
 }

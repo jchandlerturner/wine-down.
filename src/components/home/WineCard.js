@@ -28,8 +28,11 @@ class WineCard extends Component {
                     <div className="textContent">
                         <p className="cardText"><strong>Name: </strong>{this.props.wineName}</p>
                         <p className="cardText"><strong>Price: </strong>{this.props.myWine.price}</p>
-                        <p className="cardText"><strong>Type: </strong>{this.props.myWine.type.type}</p>
+                        <p className="cardText"><strong>Rating: </strong>{this.props.myWine.starRating}</p>
                         <p className="cardText"><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
+                        <hr>
+                        </hr>
+                        <p className="cardText"><strong>Notes: </strong>{this.props.myWine.tastingNotes}</p>
                         <div className="cardButtons">
                             <button type="button" className="editButton"
                                 onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>
