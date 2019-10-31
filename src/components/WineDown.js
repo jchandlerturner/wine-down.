@@ -60,7 +60,7 @@ class WineDown extends Component {
         {(this.state.user) ?
           <>
             <NavBar user={this.state.user} clearUser={this.clearUser} />
-            <ApplicationViews clearUser={this.clearUser} />
+            <ApplicationViews key={parseInt(sessionStorage.getItem("userId"))}clearUser={this.clearUser} />
           </>
           : <><div className="logRegContainer">
           {(this.state.showSignUp) ?

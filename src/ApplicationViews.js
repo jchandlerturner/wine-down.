@@ -19,7 +19,7 @@ export default class ApplicationViews extends Component {
         return (
             <React.Fragment>
                 <Route exact path="/" render={(props) => {
-                    return <Home  {...props} />
+                    return <Home key={parseInt(sessionStorage.getItem("userId"))} {...props} />
                 }} />
                 <Route exact path="/signup" render={(props) => {
                     return <SignUp {...props} />
