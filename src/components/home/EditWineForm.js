@@ -77,7 +77,6 @@ class EditWineForm extends Component {
     }
 
     render() {
-        console.log(this.state.currentWine)
         return (
             <>
                 <section className="editBody">
@@ -156,7 +155,7 @@ class EditWineForm extends Component {
 
                                 </div>
                                 <div className="alignRight">
-                                    <button
+                                    <button id="cardAddButton"
                                         type="button"
                                         disabled={this.state.loadingStatus}
                                         onClick={this.updateWine}

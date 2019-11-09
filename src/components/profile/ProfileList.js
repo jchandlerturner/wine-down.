@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link, withRouter } from "react-router-dom"
 import WineManager from '../../modules/WineManager'
 import WineCard from '../home/WineCard'
 import VarietalManager from '../../modules/VarietalManager';
@@ -50,7 +51,11 @@ class ProfileList extends Component {
                 })
             })
     }
-
+    showTop = () => {
+        if (this.state.wines.starRating > 3) {
+            return (<p>working</p>)
+        }
+    }
     componentDidMount() {
         const newState = {}
         WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
@@ -71,19 +76,22 @@ class ProfileList extends Component {
         return (
             <>
 
-                <button onClick={this.handleLogout}>Log Out</button>
-                <div className="cardContainer">
-                    {this.state.wines.map(wine =>
-                        <WineCard
-                            key={wine.id}
-                            myWine={wine}
-                            wineName={wine.name}
-                            deleteWine={this.deleteWine}
-                            wineId={wine.id}
-                            typeId={wine.type.id}
-                            {...this.props}
-                        />
-                    )}
+                <button className="logoutButton" onClick={this.handleLogout}>Log Out</button>
+                <div className="userBanner">
+                    <h1>
+                        Welcome {sessionStorage.getItem("name")}
+                    </h1>
+                </div>
+                <div id="fiveStars">
+                <Link className="nav-link" to="/1">One Star Wines</Link>
+                <br></br>
+                <Link className="nav-link" to="/2">Two Star Wines</Link>
+                <br></br>
+                <Link className="nav-link" to="/3">Three Star Wines</Link>
+                <br></br>
+                <Link className="nav-link" to="/4">Four Star Wines</Link>
+                <br></br>
+                <Link className="nav-link" to="/5">Five Star Wines</Link>
                 </div>
             </>
 
@@ -91,4 +99,4 @@ class ProfileList extends Component {
     }
 }
 
-export default ProfileList
+export default withRouter(ProfileList);

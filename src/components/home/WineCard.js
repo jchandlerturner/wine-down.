@@ -12,7 +12,7 @@ class WineCard extends Component {
         } else if (this.props.myWine.typeId=== 2) {
             return (<img id="cardIcon" src={require('./wineIconWhite-01.png')} alt="My Dog" />)
         } else if (this.props.myWine.typeId=== 4) {
-            return (<img id="cardIcon" src={require('./wineIconRose-01.png')} alt="My Dog" />)
+            return (<img id="cardIcon" src={require('./wineIconROSE.png')} alt="My Dog" />)
         } else if (this.props.myWine.typeId=== 3) {
             return (<img id="cardIcon" src={require('./wineIconBubbles-01.png')} alt="My Dog" />)
         } 
@@ -26,13 +26,13 @@ class WineCard extends Component {
                             {this.cardDisplay()}
                     </div>
                     <div className="textContent">
-                        <p className="cardText"><strong>Name: </strong>{this.props.wineName}</p>
-                        <p className="cardText"><strong>Price: </strong>{this.props.myWine.price}</p>
-                        <p className="cardText"><strong>Rating: </strong>{this.props.myWine.starRating}</p>
-                        <p className="cardText"><strong>Varietal: </strong>{this.props.myWine.varietal.varietal}</p>
+                        <p className="cardText"><strong>NAME: </strong>{this.props.wineName}</p>
+                        <p className="cardText"><strong>PRICE: </strong>{this.props.myWine.price}</p>
+                        <p className="cardText"><strong>RATING: </strong>{this.props.myWine.starRating}</p>
+                        <p className="cardText"><strong>VARIETAL: </strong>{this.props.myWine.varietal.varietal}</p>
                         <hr>
                         </hr>
-                        <p className="cardText"><strong>Notes: </strong>{this.props.myWine.tastingNotes}</p>
+                        <p className="cardText"><strong className="cardStrong">NOTES: </strong>{this.props.myWine.tastingNotes}</p>
                         <div className="cardButtons">
                             <button type="button" className="editButton"
                                 onClick={() => { this.props.history.push(`/wines/${this.props.myWine.id}/edit`) }}>Edit</button>

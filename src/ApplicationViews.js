@@ -11,6 +11,12 @@ import WhiteList from './components/browse/WhiteList'
 import BubblesList from './components/browse/BubblesList'
 import RoseList from './components/browse/RoseList'
 import Login from "./components/auth/Login";
+import OneStar from './components/profile/OneStar'
+import TwoStar from './components/profile/TwoStar'
+import ThreeStar from './components/profile/ThreeStar'
+import FourStar from './components/profile/FourStar'
+import FiveStar from './components/profile/FiveStar'
+
 
 export default class ApplicationViews extends Component {
 
@@ -51,6 +57,21 @@ export default class ApplicationViews extends Component {
                 }} />
                 <Route exact path="/rose" render={(props) => {
                     return <RoseList {...props} />
+                }} />
+                <Route exact path="/1" render={(props) => {
+                    return <OneStar {...props} />
+                }} />
+                <Route exact path="/2" render={(props) => {
+                    return <TwoStar {...props} />
+                }} />
+                <Route exact path="/3" render={(props) => {
+                    return <ThreeStar {...props} />
+                }} />
+                <Route exact path="/4" render={(props) => {
+                    return <FourStar {...props} />
+                }} />
+                <Route exact path="/5" render={(props) => {
+                    return <FiveStar {...props} />
                 }} />
             </React.Fragment>
         );

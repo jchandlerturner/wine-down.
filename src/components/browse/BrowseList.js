@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from "react-router-dom"
+// import { Link, withRouter } from "react-router-dom"
 import './Browse.css'
+import '../home/WineCard.css'
 
 
 class BrowseList extends Component {
@@ -8,7 +9,7 @@ class BrowseList extends Component {
     return (
       <div>
         <div className="headline">
-          <h1>BROWSE<br></br> WINES</h1>
+          <h1>BROWSE WINES BY TYPE</h1>
         </div>
         <section className="browseSection">
           <div className="topRow">

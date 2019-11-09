@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import LoginManager from "../../modules/LoginManager";
-import { Link, withRouter } from "react-router-dom"
+// import { Link, withRouter } from "react-router-dom"
 import './Login.css'
 
 
@@ -34,7 +34,6 @@ class Login extends Component {
             } else if (this.state.password === "") {
                 window.alert("Please enter password")
             } else if (singleUser) {
-                console.log("else if triggered")
                 sessionStorage.setItem("userId", singleUser.id);
                 sessionStorage.setItem("email", this.state.email);
                 sessionStorage.setItem("name", this.state.name);

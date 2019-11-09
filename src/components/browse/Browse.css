@@ -5,52 +5,63 @@
 .browseSection {
     display: flex;
     flex-wrap: wrap;
-    width: 100% !important;
-    height: 300px !important;
+    width: 100vw !important;
+    height: 375px !important;
+    margin-top: 82px;
 }
 
 .topRow {
     display: flex;
     flex-wrap: wrap;
-    height: 250px;
+    height: 187.5px;
 }
 
 .bottomRow {
     display: flex;
     flex-wrap: wrap;
-    height: 250px;
+    height: 187.5px;
 }
 
 .whites {
     background-image: url(./whiteDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 667px;
-    width: 375px; */
+    width: 184px;
+    height: 183.5px;
+    border-left: solid;
+    border-left-color: #F3ECDF;
+    border-bottom: solid;
+    border-bottom-color: #F3ECDF;
+    border-bottom-width: 4px;
 }
 
 .bubbles {
     background-image: url(./bubblesDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 667px;
-    width: 375px; */
+    width: 187.5px;
+    height: 184px;
 }
 
 .rose {
     background-image: url(./roseDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 125px;
-    height: 125px;
+    width: 184.5px;
+    height: 184px;
+    border-left: solid;
+    border-left-color: #F3ECDF;
 }
 
 .reds {
     background-image: url(./redDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-
-    
+    width: 187.5px;
+    height: 184px;
+    border-bottom: solid;
+    border-bottom-color: #F3ECDF;
+    border-bottom-width: 4px;
 }
 
 h1 {

@@ -20,9 +20,9 @@ input {
 
 .loginButton {
     align-items: center;
-    width: 30%;
+    width: 257px;
     text-transform: uppercase;
-    margin-left: 5.5em;
+    margin-left: 1.3em;
     margin-top: 1em;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700;
@@ -94,9 +94,9 @@ input {
 
 .reallySignUp {
     align-items: center;
-    width: 50%;
+    width: 255px;
     text-transform: uppercase;
-    margin-left: 4em;
+    margin-left: 1.35em;
     margin-top: 2em;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700;

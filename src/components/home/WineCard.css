@@ -11,6 +11,9 @@
     text-align: center;
     margin-bottom: 1rem;
     flex-direction: row;
+    background-image: url(./CardDesign-01.png);
+    background-repeat: no-repeat;
+    background-size: 335px 450px;
 }
 
 .mainCard {
@@ -38,7 +41,7 @@ button {
 
 .editCardContent {
     width: 350px;
-    height: 350px;
+    height: 380px;
     background: #FFFFFF;
     border-radius: 28px;
     margin-top: 7em;
@@ -51,22 +54,24 @@ button {
     margin-bottom: 2em;
     background-color: #F3ECDF;
     width: 202.05px;
+    border-radius: .5em;
 }
 
 #cardIcon {
-    height: 200px;
-    margin-left: 1em;
-    margin-top: 2em;
+    height: 250px;
+    margin-left: 0;
 }
 
 .cardText {
     margin-right: .5em;
     margin-bottom: .25em;
     margin-top: .25em;
+    margin-left: .25em;
 }
 
 .cardButtons {
     margin-top: 2em;
+    margin-left: .5em;
 }
 
 .editButton {
@@ -74,7 +79,7 @@ button {
 }
 
 .deleteButton {
-    background-color: white;
+    background-color: #F3ECDF;
     color: #6D1A2A;
 }
 
@@ -106,4 +111,63 @@ textarea {
 
 label {
     margin-top: 1em;
+}
+
+.logoutButton {
+    align-items: center;
+    width: 30%;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-left: .5em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    padding-left: 7px;
+    letter-spacing: 2px;
+    height: 2em;
+    font-size: 14pt;
+    background-color: #F3ECDF;
+    color: #6D1A2A;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    height: 75px;
+    width: 375px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+}
+
+#cardAddButton {
+    align-items: center;
+    width: 257px;
+    text-transform: uppercase;
+    /* margin-left: 1.3em; */
+    margin-top: 2em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    padding-left: 7px;
+    letter-spacing: 2px;
+    height: 2em;
+    font-size: 14pt;
+    margin-bottom: 0;
+}
+
+.alignRight {
+    justify-content: center;
+    display: flex;
 }

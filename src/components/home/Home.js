@@ -55,28 +55,23 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    console.log("home component is MOUNTED YO")
-    console.log("this is what is in session storage when called on", parseInt(sessionStorage.getItem("userId")))
     WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
-      console.log("these are the wines returned in the fetch call", wines)
       
        this.setState({wines:wines})
     })
-    .then(() => console.log(this.state))
 
 }
   render() {
-    console.log("home render is triggered")
     return (
       <>
       <section id="mainBody">
         <button type="button"
-          className="btn"
+          className="addButton"
           onClick={() => { this.props.history.push("/wines/new") }}>
           Add Wine
       </button>
         <div className="homeHead">
-          <h3>your recent wines</h3>
+          <h3 className="homeHeader">My Recent Wines</h3>
         </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
