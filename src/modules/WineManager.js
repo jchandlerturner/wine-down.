@@ -54,18 +54,18 @@ updateRating(editedWines) {
   }).then(data => data.json());
 },
 getOneStar(userId) {
-  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=1&_expand=varietal`).then(result => result.json())
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️&_expand=varietal`).then(result => result.json())
 },
 getTwoStar(userId) {
-  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=2&_expand=varietal`).then(result => result.json())
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️&_expand=varietal`).then(result => result.json())
 },
 getThreeStar(userId) {
-  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=3&_expand=varietal`).then(result => result.json())
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
 },
 getFourStar(userId) {
-  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=4&_expand=varietal`).then(result => result.json())
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
 },
 getFiveStar(userId) {
-  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=5&_expand=varietal`).then(result => result.json())
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
 },
 }

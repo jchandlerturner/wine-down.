@@ -38,7 +38,7 @@ class AddWineForm extends Component {
                 name: this.state.name,
                 price: parseFloat(this.state.price),
                 tastingNotes: this.state.tastingNotes,
-                starRating: parseInt(this.state.starRating),
+                starRating: this.state.starRating,
                 varietalId: parseInt(this.state.varietal),
                 typeId: parseInt(this.state.type),
                 userId: this.activeUser,
@@ -99,13 +99,24 @@ class AddWineForm extends Component {
 
                                     <label htmlFor="Rating">Rating</label>
                                     <br></br>
-                                    <input
+                                    <select
+                                        name="starRating"
+                                        id="starRating"
+                                        onChange={this.handleFieldChange}>
+                                        <option>⭐️</option>
+                                        <option>⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️⭐️⭐️</option>
+                                        )}
+                                    </select>
+                                    {/* <input
                                         type="text"
                                         required
                                         onChange={this.handleFieldChange}
                                         id="starRating"
                                         placeholder="Rate your wine from 1-5"
-                                    />
+                                    /> */}
                                     {/* <Rating /> */}
                                     <br></br>
                                     <label htmlFor="Varietal">Varietal: </label>

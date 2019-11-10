@@ -83,17 +83,37 @@ class ProfileList extends Component {
                         Welcome {sessionStorage.getItem("name")}
                     </h1>
                 </div>
-                <div id="fiveStars">
-                <Link className="nav-link" to="/1">One Star Wines</Link>
-                <br></br>
-                <Link className="nav-link" to="/2">Two Star Wines</Link>
-                <br></br>
-                <Link className="nav-link" to="/3">Three Star Wines</Link>
-                <br></br>
-                <Link className="nav-link" to="/4">Four Star Wines</Link>
-                <br></br>
-                <Link className="nav-link" to="/5">Five Star Wines</Link>
-                </div>
+                <section id="starsContainer">
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                            <Link className="nav-link" to="/1"><img id="oneStar" src={require('./RatingGraphic-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/2"><img id="oneStar" src={require('./RatingGraphic2-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/3"><img id="oneStar" src={require('./RatingGraphic3-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/4"><img id="oneStar" src={require('./RatingGraphic4-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCardLast">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/5"><img id="oneStar" src={require('./RatingGraphic5-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                </section>
             </>
 
         )
