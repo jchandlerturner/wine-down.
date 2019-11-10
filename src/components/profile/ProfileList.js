@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom"
 import WineManager from '../../modules/WineManager'
 import WineCard from '../home/WineCard'
 import VarietalManager from '../../modules/VarietalManager';
+import './Profile.css'
 
 class ProfileList extends Component {
     state = {
