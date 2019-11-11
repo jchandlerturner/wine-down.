@@ -27,74 +27,14 @@
   ],
   "wines": [
     {
-      "name": "dsgfg",
-      "price": 0,
-      "tastingNotes": "gdfgdfg",
-      "starRating": 4,
+      "name": "Decoy",
+      "price": 10,
+      "tastingNotes": "Pretty smooth for a cheap wine. Paired with pizza and was great for an under $10 option!",
+      "starRating": "⭐️⭐️⭐️",
       "varietalId": 1,
       "typeId": 1,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "name": "Chard",
-      "price": 3.99,
-      "tastingNotes": "Okay",
-      "starRating": 4,
-      "varietalId": 2,
-      "typeId": 2,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "Bubbly",
-      "price": 3.99,
-      "tastingNotes": "Good",
-      "starRating": 4,
-      "varietalId": 2,
-      "typeId": 3,
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "Rose",
-      "price": 2.99,
-      "tastingNotes": "Decent",
-      "starRating": 3,
-      "varietalId": 4,
-      "typeId": 4,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "name": "Good wine",
-      "price": 3,
-      "tastingNotes": "",
-      "starRating": "⭐️⭐️",
-      "varietalId": 2,
-      "typeId": 2,
       "userId": 2,
       "id": 5
-    },
-    {
-      "name": "decent",
-      "price": 2,
-      "tastingNotes": "",
-      "starRating": "⭐️",
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "name": "Chan",
-      "price": 3,
-      "tastingNotes": "",
-      "starRating": "⭐️⭐️⭐️⭐️⭐️",
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 2,
-      "id": 7
     }
   ],
   "varietals": [

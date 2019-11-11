@@ -86,19 +86,7 @@ class ProfileList extends Component {
                 <section id="starsContainer">
                     <div className="starsCard">
                         <div className="starsCardContent">
-                            <Link className="nav-link" to="/1"><img id="oneStar" src={require('./RatingGraphic-01.png')} alt="My Dog" /></Link>
-                        </div>
-                    </div>
-                    <br></br>
-                    <div className="starsCard">
-                        <div className="starsCardContent">
-                        <Link className="nav-link" to="/2"><img id="oneStar" src={require('./RatingGraphic2-01.png')} alt="My Dog" /></Link>
-                        </div>
-                    </div>
-                    <br></br>
-                    <div className="starsCard">
-                        <div className="starsCardContent">
-                        <Link className="nav-link" to="/3"><img id="oneStar" src={require('./RatingGraphic3-01.png')} alt="My Dog" /></Link>
+                            <Link className="nav-link" to="/5"><img id="oneStar" src={require('./RatingGraphic5-01.png')} alt="My Dog" /></Link>
                         </div>
                     </div>
                     <br></br>
@@ -108,9 +96,21 @@ class ProfileList extends Component {
                         </div>
                     </div>
                     <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                            <Link className="nav-link" to="/3"><img id="oneStar" src={require('./RatingGraphic3-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/2"><img id="oneStar" src={require('./RatingGraphic2-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
                     <div className="starsCardLast">
                         <div className="starsCardContent">
-                        <Link className="nav-link" to="/5"><img id="oneStar" src={require('./RatingGraphic5-01.png')} alt="My Dog" /></Link>
+                            <Link className="nav-link" to="/1"><img id="oneStar" src={require('./RatingGraphic-01.png')} alt="My Dog" /></Link>
                         </div>
                     </div>
                 </section>
