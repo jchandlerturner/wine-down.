@@ -56,7 +56,7 @@
     },
     {
       "name": "Kendall Jackson",
-      "price": 15,
+      "price": 16,
       "tastingNotes": "Really good! Notes of chocolate and blueberry—pairs well with sweets. ",
       "starRating": "⭐️⭐️⭐️⭐️⭐️",
       "varietalId": 1,
@@ -147,9 +147,9 @@
     {
       "name": "Menage A Trois",
       "price": 8,
-      "tastingNotes": "So sweet, not a fan. Very jammy and thick mouthfeel. ",
+      "tastingNotes": "Not my favorite. Too jammy and full bodied. ",
       "starRating": "⭐️",
-      "varietalId": 5,
+      "varietalId": 6,
       "typeId": 2,
       "userId": 5,
       "id": 15

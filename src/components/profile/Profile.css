@@ -52,3 +52,9 @@ a {
     flex-direction: row;   
     margin-bottom: 95px; 
 }
+
+.starsHeadline {
+    margin-bottom: 0;
+    text-align: center;
+    height: 75px;
+}

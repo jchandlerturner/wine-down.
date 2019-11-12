@@ -12,9 +12,9 @@ class WineCard extends Component {
         } else if (this.props.myWine.typeId=== 2) {
             return (<img id="cardIcon" src={require('./wineIconWhite-01.png')} alt="My Dog" />)
         } else if (this.props.myWine.typeId=== 4) {
-            return (<img id="cardIcon" src={require('./wineIconROSE.png')} alt="My Dog" />)
+            return (<img id="cardIcon" src={require('./wineIconRose.png')} alt="My Dog" />)
         } else if (this.props.myWine.typeId=== 3) {
-            return (<img id="cardIcon" src={require('./wineIconBubbles-01.png')} alt="My Dog" />)
+            return (<img id="cardIcon" src={require('./wineIconBubbles2.png')} alt="My Dog" />)
         } 
 
     }

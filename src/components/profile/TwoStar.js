@@ -51,8 +51,8 @@ class OneStar extends Component {
     return (
       <>
         <img id="homeIcon" onClick={() => { this.props.history.push("/profile") }} src={require('../auth/backIcon-01.png')} alt="My Dog" />
-        <div className="headline">
-          <h1>TWO STAR WINES
+        <div className="starsHeadline">
+          <h1>Two Star Wines
         </h1>
           <br></br>
         </div>

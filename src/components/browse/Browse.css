@@ -27,13 +27,13 @@
     background-image: url(./whiteDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 184px;
-    height: 183.5px;
-    border-left: solid;
+    width: 187.5px;
+    height: 187.5px;
+    /* border-left: solid;
     border-left-color: #F3ECDF;
     border-bottom: solid;
     border-bottom-color: #F3ECDF;
-    border-bottom-width: 4px;
+    border-bottom-width: 4px; */
 }
 
 .bubbles {
@@ -41,17 +41,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 187.5px;
-    height: 184px;
+    height: 187.5px;
 }
 
 .rose {
     background-image: url(./roseDiv-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 184.5px;
-    height: 184px;
-    border-left: solid;
-    border-left-color: #F3ECDF;
+    width: 187.5px;
+    height: 187.5px;
+    /* border-left: solid;
+    border-left-color: #F3ECDF; */
 }
 
 .reds {
@@ -59,10 +59,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 187.5px;
-    height: 184px;
-    border-bottom: solid;
+    height: 187.5px;
+    /* border-bottom: solid;
     border-bottom-color: #F3ECDF;
-    border-bottom-width: 4px;
+    border-bottom-width: 4px; */
 }
 
 h1 {
