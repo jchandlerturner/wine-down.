@@ -9,7 +9,7 @@ class BrowseList extends Component {
     return (
       <div>
         <div className="headline">
-          <h1>BROWSE WINES BY TYPE</h1>
+          <h1>Browse Wine By Type</h1>
         </div>
         <section className="browseSection">
           <div className="topRow">

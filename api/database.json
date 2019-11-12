@@ -23,6 +23,24 @@
       "email": "Gradi@nss",
       "password": "gradi",
       "id": 4
+    },
+    {
+      "name": "Chandler",
+      "email": "chandler@gmail.com",
+      "password": "chan",
+      "id": 5
+    },
+    {
+      "name": "Gradi",
+      "email": "gradi@gmail",
+      "password": "gradi",
+      "id": 6
+    },
+    {
+      "name": "Quin",
+      "email": "quin@qiun",
+      "password": "quin",
+      "id": 7
     }
   ],
   "wines": [
@@ -35,6 +53,106 @@
       "typeId": 1,
       "userId": 2,
       "id": 5
+    },
+    {
+      "name": "Kendall Jackson",
+      "price": 15,
+      "tastingNotes": "Really good! Notes of chocolate and blueberry—pairs well with sweets. ",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 5,
+      "id": 6
+    },
+    {
+      "name": "Summer Water",
+      "price": 13,
+      "tastingNotes": "SO GOOD! Really tasty and refreshing, definitely getting notes of pear. This one will be a summer staple! ",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 4,
+      "typeId": 4,
+      "userId": 5,
+      "id": 7
+    },
+    {
+      "name": "Veuve Cliquot",
+      "price": 60,
+      "tastingNotes": "Really delicious champagne. A little expensive but great for special occasions! ",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 3,
+      "typeId": 3,
+      "userId": 5,
+      "id": 8
+    },
+    {
+      "name": "Green Fin",
+      "price": 4,
+      "tastingNotes": "Decent cheap wine. A little jammy for me, but someone who likes sweeter wines would be into it! ",
+      "starRating": "⭐️⭐️⭐️",
+      "varietalId": 4,
+      "typeId": 1,
+      "userId": 5,
+      "id": 9
+    },
+    {
+      "name": "Kendall Jackson",
+      "price": 15,
+      "tastingNotes": "The BEST affordable Chardonnay. Very dry and light, super refreshing with notes of apple and honey. Paired well with a cheese plate.",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 2,
+      "typeId": 2,
+      "userId": 5,
+      "id": 10
+    },
+    {
+      "name": "Lamarca",
+      "price": 15,
+      "tastingNotes": "Eh, I've had better. ",
+      "starRating": "⭐️⭐️",
+      "varietalId": 3,
+      "typeId": 3,
+      "userId": 5,
+      "id": 11
+    },
+    {
+      "name": "Andre Brut",
+      "price": 6,
+      "tastingNotes": "Trashy, but in the best way. Not a great wine but for $6 this is perfect for mimosas at brunch!",
+      "starRating": "⭐️⭐️⭐️",
+      "varietalId": 6,
+      "typeId": 3,
+      "userId": 5,
+      "id": 12
+    },
+    {
+      "name": "Black Box",
+      "price": 18,
+      "tastingNotes": "A STAPLE. $18 for 3 bottles of wine, in an eco-friendly package. Wine tastes of blackberry and is dry but full bodied!",
+      "starRating": "⭐️⭐️⭐️⭐️",
+      "varietalId": 4,
+      "typeId": 1,
+      "userId": 5,
+      "id": 13
+    },
+    {
+      "name": "Indecent Canned",
+      "price": 6,
+      "tastingNotes": "Light, dry, floral notes",
+      "starRating": "⭐️⭐️⭐️",
+      "varietalId": 8,
+      "typeId": 4,
+      "userId": 5,
+      "id": 14
+    },
+    {
+      "name": "Menage A Trois",
+      "price": 8,
+      "tastingNotes": "So sweet, not a fan. Very jammy and thick mouthfeel. ",
+      "starRating": "⭐️",
+      "varietalId": 5,
+      "typeId": 2,
+      "userId": 5,
+      "id": 15
     }
   ],
   "varietals": [

@@ -57,6 +57,7 @@ button {
 .homeHeader {
     text-align: center;
     margin: 0;
-    font-size: 20pt;
+    font-size: 26pt;
     color: #F3ECDF;
+    height: 47px;
 }

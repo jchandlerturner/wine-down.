@@ -71,7 +71,7 @@ class Home extends Component {
           Add Wine
       </button>
         <div className="homeHead">
-          <h3 className="homeHeader">My Recent Wines</h3>
+          <h3 className="homeHeader">{sessionStorage.getItem("name")}'s Recent Wines</h3>
         </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>

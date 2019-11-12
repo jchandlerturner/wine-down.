@@ -76,11 +76,16 @@ button {
 
 .editButton {
     margin-right: .5em;
+    width: 50%;
+    height: 26px;
 }
 
 .deleteButton {
     background-color: #F3ECDF;
     color: #6D1A2A;
+    width: 40%;
+    font-weight: bold;
+    height: 26px;
 }
 
 .editBody {

@@ -79,8 +79,8 @@ class ProfileList extends Component {
 
                 <button className="logoutButton" onClick={this.handleLogout}>Log Out</button>
                 <div className="userBanner">
-                    <h1>
-                        Welcome {sessionStorage.getItem("name")}
+                    <h1 className="homeHeader">
+                        {sessionStorage.getItem("name")}'s Top Wines
                     </h1>
                 </div>
                 <section id="starsContainer">

@@ -1,4 +1,5 @@
 .headline {
+    margin-top: 2em;
     text-align: center;
 }
 
@@ -7,7 +8,7 @@
     flex-wrap: wrap;
     width: 100vw !important;
     height: 375px !important;
-    margin-top: 82px;
+    margin-top: 107px;
 }
 
 .topRow {

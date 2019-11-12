@@ -13,6 +13,7 @@ class Login extends Component {
         email: "",
         password: "",
         id: "",
+        name: "",
     }
 
     handleFieldChange = (evt) => {
@@ -36,7 +37,7 @@ class Login extends Component {
             } else if (singleUser) {
                 sessionStorage.setItem("userId", singleUser.id);
                 sessionStorage.setItem("email", this.state.email);
-                sessionStorage.setItem("name", this.state.name);
+                sessionStorage.setItem("name", singleUser.name);
                 this.props.setUser(singleUser);
             } else {
                 window.alert("User email and password do not match")
