@@ -15,6 +15,9 @@ How can we help wine lovers and restaurant staff track, rate, and favorite wine 
 
 I based my personas off of my friends who are casual wine drinkers, and also my coworkers in the service industry who are always losing their wine notes. 
 
+<img src="wD-persona-01.png" alt="Persona">
+<img src="wDpersona2-01.png" alt="Persona">
+
 <b>Wireframes and Mockups</b>
 
 Initially, I researched color palettes on Pinterest and researched other wine-centric websites and apps to get color inspiration. 
