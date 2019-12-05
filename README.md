@@ -2,9 +2,11 @@
 *Cohort 35 Capstone*
 
 <b>Project Overview</b>
+
 A journal app that tracks wine using ReactJS with CRUD capabilities.
 
-<b.>Challenge Statement</b>
+<b>Challenge Statement</b>
+
 Often, people forget which wines they’ve tried and what they thought of it, which can make it difficult when purchasing wine. Along with this, restaurant workers tend to not have a convenient place aside from pieces of paper, that they can keep their wine notes to stay up to date on ever-changing wine lists. 
 
 How can we help wine lovers and restaurant staff track, rate, and favorite wine tastings with on-the-go access? 
