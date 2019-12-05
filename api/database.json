@@ -56,9 +56,9 @@
     },
     {
       "name": "Kendall Jackson",
-      "price": 16,
+      "price": 12,
       "tastingNotes": "Really good! Notes of chocolate and blueberry—pairs well with sweets. ",
-      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "starRating": "⭐️⭐️⭐️⭐️",
       "varietalId": 1,
       "typeId": 1,
       "userId": 5,
@@ -153,6 +153,26 @@
       "typeId": 2,
       "userId": 5,
       "id": 15
+    },
+    {
+      "name": "Whispering Angel",
+      "price": 28,
+      "tastingNotes": "Gradi says it was good?",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 4,
+      "typeId": 4,
+      "userId": 5,
+      "id": 16
+    },
+    {
+      "name": "3 Buck Chuck",
+      "price": 3,
+      "tastingNotes": "",
+      "starRating": "⭐️⭐️⭐️⭐️",
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 5,
+      "id": 17
     }
   ],
   "varietals": [
