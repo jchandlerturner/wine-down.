@@ -43,5 +43,29 @@ getRed(userId) {
   return fetch(`${remoteURL}/wines?typeId=3&userId=${userId}&_expand=varietal`).then(result => result.json())
 },getRose(userId) {
   return fetch(`${remoteURL}/wines?typeId=4&userId=${userId}&_expand=varietal`).then(result => result.json())
-}
+},
+updateRating(editedWines) {
+  return fetch(`${remoteURL}/wines/${editedWines.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedWines)
+  }).then(data => data.json());
+},
+getOneStar(userId) {
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️&_expand=varietal`).then(result => result.json())
+},
+getTwoStar(userId) {
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️&_expand=varietal`).then(result => result.json())
+},
+getThreeStar(userId) {
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
+},
+getFourStar(userId) {
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
+},
+getFiveStar(userId) {
+  return fetch(`${remoteURL}/wines?userId=${userId}&starRating=⭐️⭐️⭐️⭐️⭐️&_expand=varietal`).then(result => result.json())
+},
 }

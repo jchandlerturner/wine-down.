@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Link, withRouter } from "react-router-dom"
 import WineManager from '../../modules/WineManager'
 import WineCard from '../home/WineCard'
 import VarietalManager from '../../modules/VarietalManager';
+import './Profile.css'
 
 class ProfileList extends Component {
     state = {
@@ -50,7 +52,11 @@ class ProfileList extends Component {
                 })
             })
     }
-
+    showTop = () => {
+        if (this.state.wines.starRating > 3) {
+            return (<p>working</p>)
+        }
+    }
     componentDidMount() {
         const newState = {}
         WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
@@ -71,24 +77,47 @@ class ProfileList extends Component {
         return (
             <>
 
-                <button onClick={this.handleLogout}>Log Out</button>
-                <div className="cardContainer">
-                    {this.state.wines.map(wine =>
-                        <WineCard
-                            key={wine.id}
-                            myWine={wine}
-                            wineName={wine.name}
-                            deleteWine={this.deleteWine}
-                            wineId={wine.id}
-                            typeId={wine.type.id}
-                            {...this.props}
-                        />
-                    )}
+                <button className="logoutButton" onClick={this.handleLogout}>Log Out</button>
+                <div className="userBanner">
+                    <h1 className="homeHeader">
+                        {sessionStorage.getItem("name")}'s Top Wines
+                    </h1>
                 </div>
+                <section id="starsContainer">
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                            <Link className="nav-link" to="/5"><img id="oneStar" src={require('./RatingGraphic5-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/4"><img id="oneStar" src={require('./RatingGraphic4-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                            <Link className="nav-link" to="/3"><img id="oneStar" src={require('./RatingGraphic3-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCard">
+                        <div className="starsCardContent">
+                        <Link className="nav-link" to="/2"><img id="oneStar" src={require('./RatingGraphic2-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="starsCardLast">
+                        <div className="starsCardContent">
+                            <Link className="nav-link" to="/1"><img id="oneStar" src={require('./RatingGraphic-01.png')} alt="My Dog" /></Link>
+                        </div>
+                    </div>
+                </section>
             </>
 
         )
     }
 }
 
-export default ProfileList
+export default withRouter(ProfileList);

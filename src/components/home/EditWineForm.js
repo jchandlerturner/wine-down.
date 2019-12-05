@@ -35,7 +35,7 @@ class EditWineForm extends Component {
             name: this.state.name,
             price: parseFloat(this.state.price),
             tastingNotes: this.state.tastingNotes,
-            starRating: parseInt(this.state.starRating),
+            starRating: this.state.starRating,
             varietalId: parseInt(this.state.varietal),
             typeId: parseInt(this.state.type),
             userId: this.activeUser,
@@ -77,7 +77,6 @@ class EditWineForm extends Component {
     }
 
     render() {
-        console.log(this.state.currentWine)
         return (
             <>
                 <section className="editBody">
@@ -110,7 +109,21 @@ class EditWineForm extends Component {
                                     <textarea id="tastingNotes" onChange={this.handleFieldChange} defaultValue={this.state.currentWine.tastingNotes} name="message" rows="10" cols="30">
                                     </textarea>
 
-                                    <label htmlFor="Rating">Rating: </label>
+                                    <label htmlFor="Rating">Rating</label>
+                                    <br></br>
+                                    <select
+                                        defaultValue={this.state.currentWine.starRating}
+                                        name="starRating"
+                                        id="starRating"
+                                        onChange={this.handleFieldChange}>
+                                        <option>⭐️</option>
+                                        <option>⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️⭐️</option>
+                                        <option>⭐️⭐️⭐️⭐️⭐️</option>
+                                        )}
+                                    </select>
+                                    {/* <label htmlFor="Rating">Rating: </label>
                                     <br></br>
                                     <input
                                         type="text"
@@ -119,7 +132,7 @@ class EditWineForm extends Component {
                                         id="starRating"
                                         placeholder="Rate your wine from 1-5"
                                         defaultValue={this.state.currentWine.starRating}
-                                    />
+                                    /> */}
 
                                     <br></br>
                                     {this.state.varietals.length > 0 ?
@@ -156,7 +169,7 @@ class EditWineForm extends Component {
 
                                 </div>
                                 <div className="alignRight">
-                                    <button
+                                    <button id="cardAddButton"
                                         type="button"
                                         disabled={this.state.loadingStatus}
                                         onClick={this.updateWine}

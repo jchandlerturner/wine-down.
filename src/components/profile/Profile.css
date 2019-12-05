@@ -1,0 +1,60 @@
+a {
+    text-decoration: none;
+    font-family: 'Darker Grotesque', sans-serif;
+    letter-spacing: 2pt;
+    color: #F3ECDF;
+    font-size: 20pt;
+}
+
+.starsCard {
+        width: 335px;
+        height: 450px;
+        left: 54px;
+        top: 177px;
+        background: #FFFFFF;
+        border-radius: 28px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+        flex-direction: row;   
+        margin-bottom: 75px; 
+}
+
+#starsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#oneStar {
+    height: 450px;
+    width: 335px;
+}
+
+.starsCardContent {
+    margin-bottom: 1rem;
+}
+
+.starsCardLast {
+    width: 335px;
+    height: 450px;
+    left: 54px;
+    top: 177px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+    flex-direction: row;   
+    margin-bottom: 95px; 
+}
+
+.starsHeadline {
+    margin-bottom: 0;
+    text-align: center;
+    height: 75px;
+}

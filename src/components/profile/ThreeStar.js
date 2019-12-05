@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 // import { Link, withRouter } from "react-router-dom"
-import TypeCard from './TypeCard'
+import TypeCard from '../browse/TypeCard'
 import WineManager from '../../modules/WineManager'
+import '../home/WineCard.css'
 
-
-class WhiteList extends Component {
+class OneStar extends Component {
   state = {
     wines: [],
     loadingStatus: false
@@ -17,7 +17,7 @@ class WhiteList extends Component {
   deleteWine = id => {
     WineManager.delete(id)
       .then(() => {
-        WineManager.getBubbles(parseInt(sessionStorage.getItem("userId")))
+        WineManager.getThreeStar(parseInt(sessionStorage.getItem("userId")))
           .then((newWines) => {
             this.setState({
               wines: newWines
@@ -35,7 +35,7 @@ class WhiteList extends Component {
   }
   componentDidMount() {
     const newState = {}
-    WineManager.getBubbles(parseInt(sessionStorage.getItem("userId"))).then(wines => {
+    WineManager.getThreeStar(parseInt(sessionStorage.getItem("userId"))).then(wines => {
       newState.wines = wines
     })
       //Sort + grab sub zero//
@@ -50,9 +50,11 @@ class WhiteList extends Component {
   render() {
     return (
       <>
-        <img id="homeIcon" onClick={() => { this.props.history.push("/browse") }} src={require('../auth/backIcon-01.png')} alt="My Dog" />
-        <div className="headline">
-          <h1>BUBBLY WINES</h1>
+        <img id="homeIcon" onClick={() => { this.props.history.push("/profile") }} src={require('../auth/backIcon-01.png')} alt="My Dog" />
+        <div className="starsHeadline">
+          <h1>Three Star Wines
+        </h1>
+          <br></br>
         </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
@@ -71,4 +73,4 @@ class WhiteList extends Component {
   }
 }
 
-export default WhiteList
+export default OneStar

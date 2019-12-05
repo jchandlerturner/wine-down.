@@ -3,6 +3,7 @@ import WineManager from '../../modules/WineManager'
 import WineCard from './WineCard'
 import VarietalManager from '../../modules/VarietalManager';
 import './Home.css'
+import { parse } from 'url';
 
 
 class Home extends Component {
@@ -54,14 +55,10 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const newState = {}
     WineManager.getUserWine("wines", parseInt(sessionStorage.getItem("userId"))).then(wines => {
-        newState.wines = wines
+      
+       this.setState({wines:wines})
     })
-    //Sort + grab sub zero//
-        .then(() => {
-            this.setState(newState)
-        })
 
 }
   render() {
@@ -69,12 +66,12 @@ class Home extends Component {
       <>
       <section id="mainBody">
         <button type="button"
-          className="btn"
+          className="addButton"
           onClick={() => { this.props.history.push("/wines/new") }}>
           Add Wine
       </button>
         <div className="homeHead">
-          <h3>your recent wines</h3>
+          <h3 className="homeHeader">{sessionStorage.getItem("name")}'s Recent Wines</h3>
         </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>

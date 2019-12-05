@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from "react-router-dom"
+// import { Link, withRouter } from "react-router-dom"
 import TypeCard from './TypeCard'
 import WineManager from '../../modules/WineManager'
-
+import '../home/WineCard.css'
 
 class WhiteList extends Component {
   state = {
@@ -36,28 +36,26 @@ class WhiteList extends Component {
   componentDidMount() {
     const newState = {}
     WineManager.getRed(parseInt(sessionStorage.getItem("userId"))).then(wines => {
-        newState.wines = wines
+      newState.wines = wines
     })
-    //Sort + grab sub zero//
-        .then(() => {
-            this.setState(newState)
-        })
+      //Sort + grab sub zero//
+      .then(() => {
+        this.setState(newState)
+      })
 
-}
+  }
 
 
 
   render() {
     return (
       <>
-      <div className="headline">
-        <br></br>
-        <br></br>
-        <h1>RED<br>
-        </br>
-          WINES
+        <img id="homeIcon" onClick={() => { this.props.history.push("/browse") }} src={require('../auth/backIcon-01.png')} alt="My Dog" />
+        <div className="headline">
+          <h1>RED
+            WINES
         </h1>
-        <br></br>
+          <br></br>
         </div>
         <div className="cardContainer">
           {this.state.wines.map(wine =>
