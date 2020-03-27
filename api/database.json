@@ -55,26 +55,6 @@
       "id": 5
     },
     {
-      "name": "Kendall Jackson",
-      "price": 12,
-      "tastingNotes": "Really good! Notes of chocolate and blueberry—pairs well with sweets. ",
-      "starRating": "⭐️⭐️⭐️⭐️",
-      "varietalId": 1,
-      "typeId": 1,
-      "userId": 5,
-      "id": 6
-    },
-    {
-      "name": "Summer Water",
-      "price": 13,
-      "tastingNotes": "SO GOOD! Really tasty and refreshing, definitely getting notes of pear. This one will be a summer staple! ",
-      "starRating": "⭐️⭐️⭐️⭐️⭐️",
-      "varietalId": 4,
-      "typeId": 4,
-      "userId": 5,
-      "id": 7
-    },
-    {
       "name": "Veuve Cliquot",
       "price": 60,
       "tastingNotes": "Really delicious champagne. A little expensive but great for special occasions! ",
@@ -83,16 +63,6 @@
       "typeId": 3,
       "userId": 5,
       "id": 8
-    },
-    {
-      "name": "Green Fin",
-      "price": 4,
-      "tastingNotes": "Decent cheap wine. A little jammy for me, but someone who likes sweeter wines would be into it! ",
-      "starRating": "⭐️⭐️⭐️",
-      "varietalId": 4,
-      "typeId": 1,
-      "userId": 5,
-      "id": 9
     },
     {
       "name": "Kendall Jackson",
@@ -173,6 +143,36 @@
       "typeId": 1,
       "userId": 5,
       "id": 17
+    },
+    {
+      "name": "wine",
+      "price": 5.99,
+      "tastingNotes": "good",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 1,
+      "typeId": 1,
+      "userId": 5,
+      "id": 18
+    },
+    {
+      "name": "wine",
+      "price": 12,
+      "tastingNotes": "good",
+      "starRating": "⭐️⭐️⭐️⭐️⭐️",
+      "varietalId": 3,
+      "typeId": 2,
+      "userId": 5,
+      "id": 19
+    },
+    {
+      "name": "Kendall Jackson",
+      "price": 12,
+      "tastingNotes": "Bright and fruity",
+      "starRating": "⭐️⭐️⭐️⭐️",
+      "varietalId": 2,
+      "typeId": 2,
+      "userId": 2,
+      "id": 21
     }
   ],
   "varietals": [

@@ -65,11 +65,6 @@ class Home extends Component {
     return (
       <>
       <section id="mainBody">
-        <button type="button"
-          className="addButton"
-          onClick={() => { this.props.history.push("/wines/new") }}>
-          Add Wine
-      </button>
         <div className="homeHead">
           <h3 className="homeHeader">{sessionStorage.getItem("name")}'s Recent Wines</h3>
         </div>
@@ -85,7 +80,13 @@ class Home extends Component {
               {...this.props}
             />
           )}
+          <button type="button"
+          className="addButton"
+          onClick={() => { this.props.history.push("/wines/new") }}>
+          Add Wine
+      </button>
         </div>
+        
         </section>
       </>
       
